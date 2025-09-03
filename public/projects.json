@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio Website",
+    "year": 2025,
+    "description": "Mit portfolio bygget med React.",
+    "tags": ["React", "Portfolio", "Frontend"],
+    "image": "/img/portfolio.webp",
+    "links": [
+      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Test",
+    "year": 2025,
+    "description": "Mit portfolio bygget med React.",
+    "tags": ["React", "Portfolio", "Frontend"],
+    "image": "/img/portfolio.webp",
+    "links": [
+      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Portfolio Website",
+    "year": 2025,
+    "description": "Mit portfolio bygget med React.",
+    "tags": ["React", "Portfolio", "Frontend"],
+    "image": "/img/portfolio.webp",
+    "links": [
+      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Portfolio Website",
+    "year": 2025,
+    "description": "Mit portfolio bygget med React.",
+    "tags": ["React", "Portfolio", "Frontend"],
+    "image": "/img/portfolio.webp",
+    "links": [
+      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Portfolio Website",
+    "year": 2025,
+    "description": "Mit portfolio bygget med React.",
+    "tags": ["React", "Portfolio", "Frontend"],
+    "image": "/img/portfolio.webp",
+    "links": [
+      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
+    ]
+  }
+]
