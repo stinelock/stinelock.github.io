@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import ProjectCard from "../compotents/ProjectCard";
 
-export default function Project({ project }) {
+export default function Project() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -15,8 +16,11 @@ export default function Project({ project }) {
   }
 
   return (
-    <div>
-      <h1>Project Page</h1>
-    </div>
+    <main className="page">
+        <h1>Project Page</h1>
+      {projects.map((project) => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
+    </main>
   );
 }
