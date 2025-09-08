@@ -10,7 +10,7 @@ export default function ProjectDetailPage() {
     async function fetchProject() {
       const response = await fetch("/projects.json");
       const projectsData = await response.json();
-      const project = projectsData.find((project) => project.id === Number(id));
+      const project = projectsData.find((project) => project.id === id);
 
       console.log(project);
       setProject(project);

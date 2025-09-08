@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+/* Lav breakpoint ved 768 992 og 1200 px (brug em, rem eller % til skrifttyper*/
 
 :root {
   --green: rgb(38, 76, 89);
