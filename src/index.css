@@ -12,7 +12,7 @@
   --white: #fffef5;
 
   font-family: "calvino", sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
 
   color: var(--text-color-dark);
@@ -24,6 +24,12 @@ body {
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
+}
+
+h1{
+  font-size: 4rem;
+  margin: 0;
+  line-height: 117%;
 }
 
 .page {
@@ -63,6 +69,12 @@ nav a {
 
 .heading-desktop {
   display: none;
+}
+
+.signatur{
+  min-width: 261px;
+  height: auto;
+  max-width: 70%;
 }
 
 /*--------- Project-cards ---------*/

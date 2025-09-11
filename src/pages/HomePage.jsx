@@ -19,8 +19,13 @@ export default function HomePage() {
   return (
     <main>
       <section className="intro">
-        <h1 className="heading-mobile">Multi<br/>Medie<br/>Designer</h1>
-       <Signatur />
+        <div className="heading-mobile">
+          <h1>Multi</h1>
+          <h1>Medie</h1>
+          <h1>Designer</h1>
+        </div>
+
+        <Signatur />
         <h1 className="heading-desktop">Multimedie</h1>
         <h1 className="heading-desktop">Designer</h1>
       </section>
