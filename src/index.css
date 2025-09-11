@@ -50,9 +50,9 @@ nav a {
   border-bottom: 2px solid var(--text-color-dark);
 }
 
-.intro{
+.intro {
+  height: 100vh;
   margin: 30px;
-  padding: 240px 0;
 }
 
 .heading-mobile {
