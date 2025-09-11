@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
 }
 
-h1{
+h1 {
   font-size: 4rem;
   margin: 0;
   line-height: 117%;
@@ -71,10 +71,26 @@ nav a {
   display: none;
 }
 
-.signatur{
+.signatur {
   min-width: 261px;
   height: auto;
   max-width: 70%;
+}
+
+.cls-1 {
+  fill: none;
+}
+
+.cls-1,
+.cls-2 {
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 8px;
+}
+
+.cls-2 {
+  fill: #231f20;
 }
 
 /*--------- Project-cards ---------*/
