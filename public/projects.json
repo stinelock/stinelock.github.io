@@ -2,10 +2,10 @@
   {
     "id": "1",
     "title": "Radar",
-    "year": 2025,
+    "year": "2025",
     "description": "Samlingspunkt for Radars gæster",
-    "tags": ["Responsiv", "Frontend", "Design"],
-    "image": "/img/portfolio.webp",
+    "tags": ["Responsivitet", "Visuel Identitet", "Design"],
+    "image": "./img/radar1.jpg",
     "links": [
       { "url": "https://stinelock.github.io/Radar/", "text": "Radar Resonans" },
       { "url": "https://github.com/stinelock/Radar", "text": "GitHub Link" }
@@ -14,7 +14,7 @@
   {
     "id": "2",
     "title": "ZeroBuzz Brew",
-    "year": 2025,
+    "year": "2025",
     "description": "Mikrobryggeri med alkoholfrie øl (fiktivt)",
     "tags": ["React", "Portfolio", "Frontend"],
     "image": "/img/portfolio.webp",
@@ -26,35 +26,13 @@
   {
     "id": "3",
     "title": "Steno Museet",
-    "year": 2025,
+    "year": "2025",
     "description": "Infoskærm til Steno Museet i Aarhus",
     "tags": ["JavaScript", "Frontend", "Brugerbaseret Design"],
     "image": "/img/portfolio.webp",
     "links": [
       { "url": "http://eksamen2025.designsbymia.dk/", "text": "Steno infoskærm" },
       { "url": "https://github.com/stinelock/steno-museet", "text": "GitHub Link" }
-    ]
-  },
-  {
-    "id": "4",
-    "title": "Vin På En Søndag",
-    "year": 2025,
-    "description": "Mit maleri i akryl",
-    "tags": ["React", "Portfolio", "Frontend"],
-    "image": "/img/portfolio.webp",
-    "links": [
-      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Abstrakt leg med farver",
-    "year": 2025,
-    "description": "Mit maleri i akryl",
-    "tags": ["React", "Portfolio", "Frontend"],
-    "image": "/img/portfolio.webp",
-    "links": [
-      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
     ]
   }
 ]

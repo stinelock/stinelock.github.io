@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ProjectCard from "../compotents/ProjectCard";
+import Signatur from "../compotents/Signatur";
 
 export default function HomePage() {
   const [projects, setProjects] = useState([]);
@@ -16,12 +17,19 @@ export default function HomePage() {
   }
 
   return (
-    <div>
-      <h1>Home Page</h1>
+    <main>
+      <section className="intro">
+        <h1 className="heading-mobile">Multi<br/>Medie<br/>Designer</h1>
+       <Signatur />
+        <h1 className="heading-desktop">Multimedie</h1>
+        <h1 className="heading-desktop">Designer</h1>
+      </section>
 
+      <section className="project-section">
         {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
-    </div>
+      </section>
+    </main>
   );
 }
