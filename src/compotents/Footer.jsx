@@ -14,7 +14,7 @@ export default function Footer() {
           GITHUB
           <img src={arrowIcon} alt="GitHub Icon" />
         </a>
-        <a href="https://www.linkedin.com/in/stinelock">
+        <a href="https://www.linkedin.com/in/stine-blaabjerg-lock-276558325/">
           LINKEDIN
           <img src={arrowIcon} alt="LinkedIn Icon" />
         </a>
