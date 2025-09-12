@@ -1,7 +1,12 @@
+import NavBar from "../compotents/NavBar";
+
 export default function ContactPage() {
     return (
-        <div>
-            <h1>Contact Page</h1>
-        </div>
+      <>
+        <NavBar/>
+        <main>
+          <h1>Contact Page</h1>
+        </main>
+      </>
     );
 }

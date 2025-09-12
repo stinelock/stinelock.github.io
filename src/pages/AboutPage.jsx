@@ -1,7 +1,12 @@
+import NavBar from "../compotents/NavBar";
+
 export default function About() {
-    return(
-        <div>
-            <h1>About Page</h1>
-        </div>
-    )
+    return (
+      <>
+      <NavBar/>
+        <main>
+          <h1>About Page</h1>
+        </main>
+      </>
+    );
 }
