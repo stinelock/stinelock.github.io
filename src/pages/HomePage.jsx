@@ -24,10 +24,12 @@ export default function HomePage() {
           <h1>Medie</h1>
           <h1>Designer</h1>
         </div>
+        <div className="heading-desktop">
+          <h1>Multimedie</h1>
+          <h1>Designer</h1>
+        </div>
 
         <Signature />
-        <h1 className="heading-desktop">Multimedie</h1>
-        <h1 className="heading-desktop">Designer</h1>
       </section>
 
       <section className="project-section">
