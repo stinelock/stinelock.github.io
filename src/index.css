@@ -10,6 +10,7 @@
   --text-color-light: #f1f1f1;
   --text-color-dark: #33332e;
   --white: #fffef5;
+  --line-color:#383495;
 
   font-family: "graveur-variable", sans-serif;
   font-variation-settings: "opsz" 10, "wght" 400;
@@ -80,7 +81,7 @@ nav a {
 
 .cls-1 {
   fill: none;
-  stroke: var(--text-color-dark);
+  stroke: var(--line-color);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 8px;
@@ -143,9 +144,15 @@ nav a {
     padding-top: 20%;
     padding-bottom: 20%;
   }
+  h1{
+    line-height: 100%;
+  }
 
-  .signature {
-    max-width: 60%;
+ .signature {
+    min-width: 300px;
+    max-width: 50%;
+    margin-top: -50px;
+    margin-left: 20%;
   }
 }
 
@@ -155,11 +162,10 @@ nav a {
     padding-bottom: 30%;
   }
 
-  .signature {
-    top: 50%;
-    right: 20%;
-    max-width: 40%;
+  .signature{
+    max-width: 45%;
   }
+ 
 
   .project-card {
     margin: 2rem;
