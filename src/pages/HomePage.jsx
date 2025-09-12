@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ProjectCard from "../compotents/ProjectCard";
-import Signatur from "../compotents/Signatur";
+import Signature from "../compotents/Signature";
 
 export default function HomePage() {
   const [projects, setProjects] = useState([]);
@@ -25,7 +25,7 @@ export default function HomePage() {
           <h1>Designer</h1>
         </div>
 
-        <Signatur />
+        <Signature />
         <h1 className="heading-desktop">Multimedie</h1>
         <h1 className="heading-desktop">Designer</h1>
       </section>

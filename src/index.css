@@ -77,22 +77,15 @@ nav a {
   max-width: 70%;
 }
 
-.cls-1 {
-  fill: none;
-}
 
-.cls-1,
-.cls-2 {
+.cls-1{
+  fill: none;
   stroke: #000;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 8px;
+  stroke-dasharray: 1000;
 }
-
-.cls-2 {
-  fill: #231f20;
-}
-
 /*--------- Project-cards ---------*/
 
 .project-section {
