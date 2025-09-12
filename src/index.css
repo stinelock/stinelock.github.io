@@ -203,6 +203,8 @@ hr {
 
 /*-------------Footer---------------*/
 footer {
+  display: flex;
+  flex-direction: column;
   color: var(--text-color-dark);
   text-align: center;
   padding: 1rem;
@@ -227,6 +229,16 @@ footer a img {
   margin-left: 10px;
 }
 
+.footer-signature{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.footer-signature img{
+  object-fit: fill;
+  height: auto;
+}
 
 
 /*---------------------------Media queries---------------------------------*/
