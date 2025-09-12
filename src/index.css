@@ -1,10 +1,21 @@
-html {
-  box-sizing: border-box;
+html, body {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Lav breakpoint ved 768 992 og 1200 px (brug em, rem eller % til skrifttyper*/
@@ -27,14 +38,6 @@ html {
   background-color: var(--white);
 }
 
-body {
-  position: relative;
-  margin: 0;
-  width: 100%;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: clamp(4rem, 10vw, 8rem);
   margin: 0;
@@ -43,11 +46,10 @@ h1 {
 
 .page {
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
 }
 
-/*-----Nav Bar-------*/
+/*---------------Nav Bar---------------*/
 
 nav {
   width: 100vw;
@@ -84,6 +86,7 @@ nav a {
   height: 100vh;
   background-color: var(--white);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -109,18 +112,15 @@ hr {
   width: 100vw;
   padding: 1.8rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   z-index: 20; /* over menu overlay */
 }
 
 .active {
 }
 
-.logo.active {
-  font-weight: normal;
-  border: none;
-}
 
 .logo {
   text-decoration: none;
@@ -136,7 +136,8 @@ hr {
 
 .intro {
   height: 100vh;
-  margin: 30px;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-top: 40%;
   padding-bottom: 20%;
 }
@@ -176,7 +177,7 @@ hr {
 
 .project-card {
   background-color: var(--light-blue);
-  margin: 2rem;
+  margin: 1rem;
   padding: 0.8rem;
   text-decoration: none;
   color: var(--text-color-dark);
@@ -184,7 +185,7 @@ hr {
 }
 
 .img-container {
-  width: 300px;
+  width: 100%;
   height: 300px;
   overflow: hidden;
 }
@@ -193,6 +194,16 @@ hr {
   width: 100%;
   height: auto;
   transition: transform 0.3s ease;
+}
+
+/*-------------Footer---------------*/
+footer {
+  background-color: var(--green);
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  width:100vw;
 }
 
 /*---------------------------Media queries---------------------------------*/
@@ -215,6 +226,7 @@ hr {
 
   .intro {
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;

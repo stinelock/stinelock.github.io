@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import ProjectCard from "../compotents/ProjectCard";
-import NavBar from "../compotents/NavBar";
+
 
 export default function ProjectDetailPage() {
   const { id } = useParams();
@@ -21,11 +21,12 @@ export default function ProjectDetailPage() {
 
   return (
     <>
-    <NavBar/>
+
       <div>
         <h1>Project Detail Page: {project.id}</h1>
         <ProjectCard project={project} />
       </div>
+
     </>
   );
 }

@@ -5,6 +5,7 @@ import ContactPage from "./pages/ContactPage";
 import ProjectPage from "./pages/ProjectPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import NavBar from "./compotents/NavBar";
+import Footer from "./compotents/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/project" element={<ProjectPage />} />
         <Route path="/project/:id" element={<ProjectDetailPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }
