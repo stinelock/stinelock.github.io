@@ -1,6 +1,10 @@
-* {
+html {
   box-sizing: border-box;
 }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 /* Lav breakpoint ved 768 992 og 1200 px (brug em, rem eller % til skrifttyper*/
 
 :root {
@@ -20,6 +24,7 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   width: 100%;
   min-width: 320px;
@@ -41,8 +46,10 @@ h1 {
 /*-----Nav Bar-------*/
 
 nav {
-  width: 100%;
+  width: 100vw;
   padding: 1.8rem;
+  position: sticky;
+  top:0;
 }
 
 nav a {
@@ -55,12 +62,17 @@ nav a {
 }
 
 .menulist{
+  position:absolute;
+  top:100%;
+  left:0;
+  right:0;
+  padding:2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
+  width: auto;
+  background-color: var(--white);
 }
 
 .menulist > *{
@@ -101,21 +113,6 @@ hr{
   padding: 0;
 }
 
-.menu.open{
-  background-color: yellow;
-  position: absolute;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width:100%;
-  margin: 0;
-}
-
-.menu.closed{
-  display: none;
-  background-color: green;
-}
 /*--------- Intro Section ---------*/
 
 .intro {
