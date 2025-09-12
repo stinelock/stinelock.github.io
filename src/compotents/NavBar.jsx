@@ -10,48 +10,47 @@ export default function NavBar() {
   };
 
   const menuVariants = {
-    hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: "auto" },
+    hidden: { opacity: 0},
+    visible: { opacity: 1},
   };
 
   return (
     <>
-      <nav className="mobile-nav">
-        <div className="burger-menu">
-          <NavLink className="logo" to="/">
-            Logo
-          </NavLink>
-          <span className="nav-btn" onClick={toggleMenu}>
-            {isOpen ? "close" : "menu"}
-          </span>
-        </div>
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="menulist"
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={menuVariants}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            >
-              <NavLink to="/about">LEGEPLADS</NavLink>
-              <hr />
-              <NavLink to="/project">PROJEKTER</NavLink>
-              <hr />
-              <NavLink to="/contact">KONTAKT MIG</NavLink>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-      <nav className="nav-desktop">
-        <NavLink to="/">
-          <img src="" alt="Hjem" />
+      {/* Header med logo og burger-knap */}
+      <header className="site-header">
+        <NavLink className="logo" to="/">
+          Logo
         </NavLink>
-        <NavLink to="/about">LEGEPLADS</NavLink>
-        <NavLink to="/project">PROJEKTER</NavLink>
-        <NavLink to="/contact">KONTAKT MIG</NavLink>
-      </nav>
+        <div
+          className="burger-btn"
+          aria-expanded={isOpen}
+          aria-controls="main-navigation"
+          onClick={toggleMenu}
+        >
+          {isOpen ? "Close" : "Menu"}
+        </div>
+      </header>
+
+      {/* Fullscreen menu overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            id="main-navigation"
+            className="menu-overlay"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={menuVariants}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <NavLink to="/about">LEGEPLADS</NavLink>
+            <hr />
+            <NavLink to="/project">PROJEKTER</NavLink>
+            <hr />
+            <NavLink to="/contact" className="contact-cta">KONTAKT MIG</NavLink>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </>
   );
 }

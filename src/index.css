@@ -9,12 +9,14 @@ html {
 
 :root {
   --green: rgb(38, 76, 89);
+  --neon-green:#A8F00C;
   --light-blue: #a8ccff;
   --light-grey: #f1f1f4;
   --text-color-light: #f1f1f1;
   --text-color-dark: #33332e;
   --white: #fffef5;
   --line-color: #383495;
+  --cta-border-radius: 20px;
 
   font-family: "graveur-variable", sans-serif;
   font-variation-settings: "opsz" 10, "wght" 400;
@@ -61,44 +63,56 @@ nav a {
   font-size: 1.2rem;
 }
 
-.menulist{
-  position:absolute;
-  top:100%;
-  left:0;
-  right:0;
-  padding:2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  background-color: var(--white);
-}
-
-.menulist > *{
-text-align: center;
-  width: 100%;
-  margin: 1rem 0;
-  font-size: 3rem;
-}
-
 .nav-desktop{
   display: none;
 }
 
-.nav-mobile{
-  display: flex;
+.burger-btn {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.burger-menu{
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.menu-overlay > * {
+  margin: 1.5rem 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+hr {
+  width: 60%;
+  border: none;
+  border-top: 2px solid var(--text-color-dark);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1.8rem;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  z-index: 20; /* over menu overlay */
 }
 
 .active {
-  font-weight: bold;
-  border-bottom: 2px solid var(--text-color-dark);
 }
 
 .logo.active {
@@ -106,12 +120,16 @@ text-align: center;
   border: none;
 }
 
-hr{
-  border: none;
-  border-top: 2px solid var(--text-color-dark);
-  margin: 0;
-  padding: 0;
+.logo{
+  text-decoration: none;
 }
+
+.contact-cta{
+  background-color: var(--neon-green);
+  padding: 1.5rem;
+  border-radius: var(--cta-border-radius);
+}
+
 
 /*--------- Intro Section ---------*/
 
