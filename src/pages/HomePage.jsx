@@ -19,6 +19,7 @@ export default function HomePage() {
 
   return (
     <>
+    <div id="top"></div>
       <main>
         <section className="intro">
           <div className="heading-mobile">

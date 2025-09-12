@@ -207,7 +207,8 @@ footer {
   flex-direction: column;
   color: var(--text-color-dark);
   text-align: center;
-  padding: 1rem;
+  justify-content: center;
+  padding: 1.2rem 2rem;
   font-size: 0.9rem;
   width:100vw;
   font-family: 'poppins', sans-serif;
@@ -216,11 +217,22 @@ footer {
 .link-container{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: center;
+  margin: auto;
+}
+.big-link-container{
+  display: flex;
+  flex-direction: row;
 }
 
 footer a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 10px;
+  font-size: 1.3rem;
 }
 
 footer a img {
@@ -229,15 +241,18 @@ footer a img {
   margin-left: 10px;
 }
 
-.footer-signature{
+#footer-signature{
+  margin-top: 1.2rem;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-.footer-signature img{
+#footer-signature img{
   object-fit: fill;
+  width: 200px;
   height: auto;
+  margin-left: 0;
 }
 
 
