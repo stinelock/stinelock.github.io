@@ -13,7 +13,6 @@ async function fetchSignature(){
   const response = await fetch("/signature.json");
   const data = await response.json();
   setPaths(data);
-  console.log(data);
 }
 
   return (
