@@ -38,6 +38,7 @@ async function fetchSignature(){
               transition={{
                 duration: path.duration,
                 delay: path.delay,
+                ease: "easeOut",
               }}
             />
           );

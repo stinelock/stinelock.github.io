@@ -59,6 +59,7 @@ nav a {
 .intro {
   height: 100vh;
   margin: 30px;
+  padding-top: 50%;
 }
 
 .heading-mobile {
@@ -80,7 +81,7 @@ nav a {
 
 .cls-1{
   fill: none;
-  stroke: #000;
+  stroke: var(--text-color-dark);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 8px;
