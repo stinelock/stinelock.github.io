@@ -1,6 +1,6 @@
+import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { NavLink } from "react-router";
-import { motion, AnimatePresence } from "motion/react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +8,10 @@ export default function NavBar() {
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
   };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  }
 
   const menuVariants = {
     hidden: { opacity: 0},
@@ -18,7 +22,7 @@ export default function NavBar() {
     <>
       {/* Header med logo og burger-knap */}
       <header className="site-header">
-        <NavLink className="logo" to="/">
+        <NavLink to="/" onClick={closeMenu} className="logo">
           Logo
         </NavLink>
         <div
@@ -43,11 +47,17 @@ export default function NavBar() {
             variants={menuVariants}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <NavLink to="/about">LEGEPLADS</NavLink>
+            <NavLink to="/about" onClick={closeMenu}>
+              LEGEPLADS
+            </NavLink>
             <hr />
-            <NavLink to="/project">PROJEKTER</NavLink>
+            <NavLink to="/project" onClick={closeMenu}>
+              PROJEKTER
+            </NavLink>
             <hr />
-            <NavLink to="/contact" className="contact-cta">KONTAKT MIG</NavLink>
+            <NavLink to="/contact" onClick={closeMenu} className="contact-cta">
+              KONTAKT MIG
+            </NavLink>
           </motion.nav>
         )}
       </AnimatePresence>
