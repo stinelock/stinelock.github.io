@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ProjectCard from "../compotents/ProjectCard";
 import Signature from "../compotents/Signature";
+import SkillSection from "../compotents/SkillSection";
 
 
 export default function HomePage() {
@@ -40,6 +41,7 @@ export default function HomePage() {
             <ProjectCard key={project.id} project={project} />
           ))}
         </section>
+       <SkillSection />
       </main>
     </>
   );

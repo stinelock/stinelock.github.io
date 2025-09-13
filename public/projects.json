@@ -5,7 +5,7 @@
     "year": "2025",
     "description": "Samlingspunkt for Radars gæster",
     "tags": ["Responsivitet", "Visuel Identitet", "Design"],
-    "image": "./img/radar1.jpg",
+    "image": ["./img/radartlf.jpg","./img/radar1.jpg"],
     "links": [
       { "url": "https://stinelock.github.io/Radar/", "text": "Radar Resonans" },
       { "url": "https://github.com/stinelock/Radar", "text": "GitHub Link" }
@@ -13,11 +13,11 @@
   },
   {
     "id": "2",
-    "title": "ZeroBuzz Brew",
-    "year": "2025",
-    "description": "Mikrobryggeri med alkoholfrie øl (fiktivt)",
-    "tags": ["React", "Portfolio", "Frontend"],
-    "image": "/img/portfolio.webp",
+    "title": "Forlæns & Baglæns",
+    "year": "2024",
+    "description": "Tapasbar i Aarhus",
+    "tags": ["Responsivitet", "Visuel Identitet", "Redesign"],
+    "image": ["/img/fb1.webp"],
     "links": [
       { "url": "https://cederdorff.github.io", "text": "React Portfolio" },
       { "url": "https://github.com/stinelock/Zero-Buzz-Brew-main", "text": "GitHub Link" }
@@ -28,8 +28,8 @@
     "title": "Steno Museet",
     "year": "2025",
     "description": "Infoskærm til Steno Museet i Aarhus",
-    "tags": ["JavaScript", "Frontend", "Brugerbaseret Design"],
-    "image": "/img/portfolio.webp",
+    "tags": ["JavaScript", "Frontend", "Brugerbaseret design"],
+    "image": ["/img/steno2.webp","/img/stenomuseum1.webp"],
     "links": [
       { "url": "http://eksamen2025.designsbymia.dk/", "text": "Steno infoskærm" },
       { "url": "https://github.com/stinelock/steno-museet", "text": "GitHub Link" }

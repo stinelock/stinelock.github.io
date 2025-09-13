@@ -22,7 +22,7 @@ body {
 /* Lav breakpoint ved 768 992 og 1200 px (brug em, rem eller % til skrifttyper*/
 
 :root {
-  --green: rgb(38, 76, 89);
+  --light-green: #DFF0B9;
   --neon-green: #a8f00c;
   --light-blue: #a8ccff;
   --light-grey: #f1f1f4;
@@ -31,6 +31,7 @@ body {
   --white: #fffef5;
   --line-color: #383495;
   --cta-border-radius: 20px;
+  --border-radius: 50px;
 
   font-family: "graveur-variable", sans-serif;
   font-variation-settings: "opsz" 10, "wght" 400;
@@ -92,7 +93,6 @@ nav a {
   height: 100vh;
   background-color: var(--white);
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -190,6 +190,7 @@ hr {
 }
 
 .img-container {
+  position: relative;
   width: 100%;
   height: 300px;
   overflow: hidden;
@@ -197,14 +198,58 @@ hr {
 
 .img-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
+ object-fit:cover;
   transition: transform 0.3s ease;
+}
+
+.project-card p {
+  font-size: 1.2rem;
+}
+
+.project-card h2 {
+  font-size: 2rem;
+}
+
+.project-card-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.project-card-heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.project-card-heading p{
+  font-size: 1.8rem;
+}
+
+/*------------SkillPill-----------------*/
+.skill-pill {
+  display: inline-block;
+  background-color: var(--light-green);
+  color: var(--text-color-dark);
+font-family: "poppins", sans-serif;
+font-size: 1.2rem;
+
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  margin: 0.2rem;
 }
 
 /*-------------Footer---------------*/
 footer {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   color: var(--text-color-dark);
   text-align: center;
   justify-content: center;
@@ -297,7 +342,22 @@ footer a img {
     margin-top: -50px;
     margin-left: 20%;
   }
+
+  footer{
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  footer p {
+    width: fit-content;
+  }
+  #footer-signature {
+width: auto;
 }
+
+  .link-container {
+    margin-left: 30px;
+  }
 
 /*----------------Computer-----------------*/
 
