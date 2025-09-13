@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { NavLink } from "react-router";
+import ContactCTA from "./ContactCTA";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,11 @@ export default function NavBar() {
         <NavLink to="/" onClick={closeMenu} className="logo">
           Logo
         </NavLink>
+        <nav className="nav-desktop">
+          <NavLink to="/about">LEGEPLADS</NavLink>
+          <NavLink to="/project">PROJEKTER</NavLink>
+         <ContactCTA/>
+        </nav>
         <div
           className="burger-btn"
           aria-expanded={isOpen}

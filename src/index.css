@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   position: relative;
   margin: 0;
   width: 100%;
@@ -44,7 +45,7 @@ h1 {
   line-height: 117%;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--text-color-dark);
 }
@@ -125,7 +126,6 @@ hr {
 
 .active {
 }
-
 
 .logo {
   text-decoration: none;
@@ -210,11 +210,11 @@ footer {
   justify-content: center;
   padding: 1.2rem 2rem;
   font-size: 0.9rem;
-  width:100vw;
-  font-family: 'poppins', sans-serif;
+  width: 100vw;
+  font-family: "poppins", sans-serif;
 }
 
-.link-container{
+.link-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -222,12 +222,12 @@ footer {
   justify-content: center;
   margin: auto;
 }
-.big-link-container{
+.big-link-container {
   display: flex;
   flex-direction: row;
 }
 
-footer a{
+footer a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,22 +241,23 @@ footer a img {
   margin-left: 10px;
 }
 
-#footer-signature{
+#footer-signature {
   margin-top: 1.2rem;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-#footer-signature img{
+#footer-signature img {
   object-fit: fill;
   width: 200px;
   height: auto;
   margin-left: 0;
 }
 
-
 /*---------------------------Media queries---------------------------------*/
+
+/*---------------Tablet-----------------*/
 
 @media (min-width: 768px) {
   .heading-mobile {
@@ -276,7 +277,7 @@ footer a img {
 
   .intro {
     display: flex;
-    
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -298,7 +299,59 @@ footer a img {
   }
 }
 
+/*----------------Computer-----------------*/
+
 @media (min-width: 992px) {
+  .nav-desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
+  nav {
+    padding: 0;
+  }
+
+  nav a:hover {
+    color: var(--neon-green);
+    transition: color 0.3s ease;
+  }
+
+  .contact-cta {
+    position: relative;
+    border: var(--neon-green) 2px solid;
+    background-color: transparent;
+    padding: 0.2rem 1.5rem;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .contact-cta span{
+    color: var(--text-color-dark);
+    z-index: 1;
+  }
+
+  .contact-cta .background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--neon-green);
+    z-index: 0;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .site-header {
+    flex-direction: row;
+    padding: 2rem 4rem;
+    align-items: center;
+  }
+
   .intro {
     padding-bottom: 30%;
   }
