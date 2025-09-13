@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ProjectCard from "../compotents/ProjectCard";
 import Signature from "../compotents/Signature";
 import SkillSection from "../compotents/SkillSection";
+import ContactSection from "../compotents/ContactSection";
 
 
 export default function HomePage() {
@@ -42,6 +43,7 @@ export default function HomePage() {
           ))}
         </section>
        <SkillSection />
+       <ContactSection />
       </main>
     </>
   );

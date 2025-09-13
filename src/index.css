@@ -120,7 +120,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   z-index: 20; /* over menu overlay */
 }
 
@@ -129,6 +129,7 @@ hr {
 
 .logo {
   text-decoration: none;
+  width: 60px;
 }
 
 .contact-cta {
@@ -252,7 +253,7 @@ font-size: 1.2rem;
   align-items: center;
   gap: 1rem;
   padding: 2rem;
-  height: 100vh; /* Full viewport height */
+  height: 100%; /* Full viewport height */
   overflow: hidden; /* Prevent overflow during parallax */
 }
 
@@ -369,6 +370,7 @@ width: auto;
   .link-container {
     margin-left: 30px;
   }
+}
 
 /*----------------Computer-----------------*/
 

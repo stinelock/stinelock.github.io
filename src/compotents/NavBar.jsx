@@ -23,13 +23,13 @@ export default function NavBar() {
     <>
       {/* Header med logo og burger-knap */}
       <header className="site-header">
-        <NavLink to="/" onClick={closeMenu} className="logo">
-          Logo
+        <NavLink to="/" onClick={closeMenu}>
+          <img src="./img/logo.png" alt="Logo" className="logo" />
         </NavLink>
         <nav className="nav-desktop">
           <NavLink to="/about">LEGEPLADS</NavLink>
           <NavLink to="/project">PROJEKTER</NavLink>
-         <ContactCTA/>
+          <ContactCTA />
         </nav>
         <div
           className="burger-btn"
