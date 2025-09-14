@@ -19,7 +19,7 @@ export default function ProjectDetailPage() {
   }, [id]);
 
   return (
-    <main className="page">
+    <main className="page detailpage">
       <div className="img-container">
         <img src={project.image} alt={project.title} />
       </div>
@@ -40,6 +40,9 @@ export default function ProjectDetailPage() {
             ))}
           </ul>
         </div>
+      </div>
+      <div className="img-container">
+        <img src={project.image} alt={project.title}></img>
       </div>
       <div className="img-container">
         <img src={project.image} alt={project.title}></img>
