@@ -190,6 +190,7 @@ hr {
 }
 
 .project-card {
+  font-family: 'graveur-variable', sans-serif;
   background-color: var(--light-blue);
   margin: 1rem;
   padding: 0.8rem;

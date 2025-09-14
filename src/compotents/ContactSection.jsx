@@ -5,7 +5,7 @@ export default function ContactSection({page}) {
     if (page === "home"){
         return (
           <section className="contact-section">
-              <h2>Kontakt mig</h2>
+              <h1>Mangler i praktikant?</h1>
               <ContactCTA />
           </section>
         );
