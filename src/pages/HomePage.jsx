@@ -1,12 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ProjectCard from "../compotents/ProjectCard";
 import Signature from "../compotents/Signature";
 import SkillSection from "../compotents/SkillSection";
 import ContactSection from "../compotents/ContactSection";
 
 
-export default function HomePage() {
+export default function HomePage({scrollTo}) {
   const [projects, setProjects] = useState([]);
+   const projectRef = useRef(null);
+
+   useEffect(() =>{
+    if (scrollTo === "projects" && projectRef.current) {
+      projectRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+   },[scrollTo]);
 
   useEffect(() => {
     fetchProjects();
@@ -37,7 +44,7 @@ export default function HomePage() {
           <Signature />
         </section>
 
-        <section className="project-section">
+        <section ref={projectRef} className="project-section">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

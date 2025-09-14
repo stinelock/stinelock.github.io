@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "motion/react";
 
-const MotionNavLink = motion(NavLink);
+const MotionNavLink = motion.create(NavLink);
 
 export default function ContactCTA() {
   return (

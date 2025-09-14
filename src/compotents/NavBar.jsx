@@ -12,11 +12,11 @@ export default function NavBar() {
 
   const closeMenu = () => {
     setIsOpen(false);
-  }
+  };
 
   const menuVariants = {
-    hidden: { opacity: 0},
-    visible: { opacity: 1},
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   return (
@@ -28,7 +28,9 @@ export default function NavBar() {
         </NavLink>
         <nav className="nav-desktop">
           <NavLink to="/about">LEGEPLADS</NavLink>
-          <NavLink to="/project">PROJEKTER</NavLink>
+          <NavLink to="/" state={{ scrollTo: "projects" }}>
+            PROJEKTER
+          </NavLink>
           <ContactCTA />
         </nav>
         <div
@@ -57,7 +59,11 @@ export default function NavBar() {
               LEGEPLADS
             </NavLink>
             <hr />
-            <NavLink to="/project" onClick={closeMenu}>
+            <NavLink
+              to="/"
+              state={{ scrollTo: "projects" }}
+              onClick={closeMenu}
+            >
               PROJEKTER
             </NavLink>
             <hr />
