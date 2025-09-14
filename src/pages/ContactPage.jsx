@@ -1,10 +1,11 @@
+import ContactSection from "../compotents/ContactSection";
 
 export default function ContactPage() {
     return (
       <>
  
         <main>
-          <h1>Contact Page</h1>
+       <ContactSection page="contact"/>
         </main>
 
       </>

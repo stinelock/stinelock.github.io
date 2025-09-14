@@ -46,6 +46,12 @@ h1 {
   line-height: 117%;
 }
 
+h3{
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 a {
   text-decoration: none;
   color: var(--text-color-dark);
@@ -136,6 +142,7 @@ hr {
   background-color: var(--neon-green);
   padding: 1rem;
   border-radius: var(--cta-border-radius);
+  font-family: "poppins", sans-serif;
 }
 
 /*--------- Intro Section ---------*/
@@ -246,19 +253,21 @@ font-size: 1.2rem;
   margin: 0.2rem;
 }
 
-.skill-section {
+
+/*-------------Contact---------------*/
+.contact-section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  height: 100%; /* Full viewport height */
-  overflow: hidden; /* Prevent overflow during parallax */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+margin-top: 7rem;
+  text-align: left;
 }
 
 /*-------------Footer---------------*/
 footer {
+  position: relative;
+  bottom:0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

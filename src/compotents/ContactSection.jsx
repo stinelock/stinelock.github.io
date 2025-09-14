@@ -1,13 +1,27 @@
 import ContactCTA from "./ContactCTA";
 
-export default function ContactSection() {
+export default function ContactSection({page}) {
+
+    if (page === "home"){
+        return (
+          <section className="contact-section">
+              <h2>Kontakt mig</h2>
+              <ContactCTA />
+          </section>
+        );
+    }
+
+    else if (page === "contact"){
   return (
     <section className="contact-section">
-
-        {/* Jeg tænker at jeg i den her sektoin kan lave en conditional rendering hvor mit tlf og email skal vises hvis man er på "/Contact" params?? og CTA knap hvis det er på forsiden*/}
-        
-      <h2>Kontakt mig</h2>
-      <ContactCTA />
+      <h1>Lad os snakke</h1>
+      <h3>RING</h3>
+      <a href="tel:+4529451049">+45 29 45 10 49</a>
+      <h3>SKRIV</h3>
+      <a href="mailto:stine.b.lock@gmail.dk" className="footer-link">
+        stine.b.lock@gmail.com
+      </a>
     </section>
   );
+}
 }

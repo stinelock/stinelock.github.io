@@ -43,7 +43,7 @@ export default function HomePage() {
           ))}
         </section>
        <SkillSection />
-       <ContactSection />
+       <ContactSection page="home"/>
       </main>
     </>
   );
