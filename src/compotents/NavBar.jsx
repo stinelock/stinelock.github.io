@@ -26,13 +26,17 @@ export default function NavBar() {
         <NavLink to="/" onClick={closeMenu}>
           <img src="./img/logo.png" alt="Logo" className="logo" />
         </NavLink>
+
+        {/*Desktop navigation */}
         <nav className="nav-desktop">
-          <NavLink to="/about">LEGEPLADS</NavLink>
+          <NavLink to="/legeplads">LEGEPLADS</NavLink>
           <NavLink to="/" state={{ scrollTo: "projects" }}>
             PROJEKTER
           </NavLink>
           <ContactCTA />
         </nav>
+
+        {/* Burger-knap */}
         <div
           className="burger-btn"
           aria-expanded={isOpen}
@@ -43,7 +47,7 @@ export default function NavBar() {
         </div>
       </header>
 
-      {/* Fullscreen menu overlay */}
+      {/* Mobil menu overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.nav
@@ -55,7 +59,7 @@ export default function NavBar() {
             variants={menuVariants}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <NavLink to="/about" onClick={closeMenu}>
+            <NavLink to="/legeplads" onClick={closeMenu}>
               LEGEPLADS
             </NavLink>
             <hr />
@@ -67,7 +71,7 @@ export default function NavBar() {
               PROJEKTER
             </NavLink>
             <hr />
-            <NavLink to="/contact" onClick={closeMenu} className="contact-cta">
+            <NavLink to="/kontakt" onClick={closeMenu} className="contact-cta">
               KONTAKT MIG
             </NavLink>
           </motion.nav>
