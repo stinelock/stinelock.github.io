@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
+import arrowIcon from "/img/arrow-up-right.svg";
 
 export default function ProjectDetailPage() {
   const { id } = useParams();
@@ -39,6 +40,14 @@ export default function ProjectDetailPage() {
               <li key={index}>{tag}</li>
             ))}
           </ul>
+        </div>
+        <div className="project-links">
+          {project.links?.map((link, index) => (
+            <a key={index} href={link.url} target="_blank" rel="noreferrer">
+              {link.text}
+              <img src={arrowIcon}/>
+            </a>
+          ))}
         </div>
       </div>
       <div className="img-container">

@@ -242,6 +242,10 @@ hr {
 }
 
 /*----------ProjectDetail Page--------*/
+.detailpage .img-container{
+  margin-top: 2rem;
+  height: 400px;
+}
 .project-detail{
   display: flex;
   flex-direction: column;
@@ -278,6 +282,11 @@ hr {
   margin-bottom: 4px; 
 }
 
+.project-links{
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
 
 /*------------SkillPill-----------------*/
 .skill-pill {

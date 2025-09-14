@@ -7,7 +7,7 @@
     "tags": ["Responsivitet", "Visuel Identitet", "Design"],
     "image": ["/img/radartlf.jpg","/img/radar1.jpg"],
     "links": [
-      { "url": "https://stinelock.github.io/Radar/", "text": "Radar Resonans" },
+      { "url": "https://stinelock.github.io/Radar/", "text": "Website" },
       { "url": "https://github.com/stinelock/Radar", "text": "GitHub Link" }
     ]
   },
