@@ -15,12 +15,14 @@ export default function ContactSection({page}) {
   return (
     <section className="contact-section">
       <h1>Lad os snakke</h1>
-      <h3>RING</h3>
-      <a href="tel:+4529451049">+45 29 45 10 49</a>
-      <h3>SKRIV</h3>
-      <a href="mailto:stine.b.lock@gmail.dk" className="footer-link">
-        stine.b.lock@gmail.com
-      </a>
+      <div>
+        <h3>RING</h3>
+        <a href="tel:+4529451049">+45 29 45 10 49</a>
+      </div>
+      <div>
+        <h3>SKRIV</h3>
+        <a href="mailto:stine.b.lock@gmail.dk">stine.b.lock@gmail.com</a>
+      </div>
     </section>
   );
 }

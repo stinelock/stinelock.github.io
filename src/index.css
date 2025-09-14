@@ -22,7 +22,7 @@ body {
 /* Lav breakpoint ved 768 992 og 1200 px (brug em, rem eller % til skrifttyper*/
 
 :root {
-  --light-green: #DFF0B9;
+  --light-green: #dff0b9;
   --neon-green: #a8f00c;
   --light-blue: #a8ccff;
   --light-grey: #f1f1f4;
@@ -46,13 +46,14 @@ h1 {
   line-height: 117%;
 }
 
-h3{
+h3 {
   font-family: "poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 a {
+  font-family: "poppins", sans-serif;
   text-decoration: none;
   color: var(--text-color-dark);
 }
@@ -207,7 +208,7 @@ hr {
 .img-container img {
   width: 100%;
   height: 100%;
- object-fit:cover;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
@@ -219,7 +220,7 @@ hr {
   font-size: 2rem;
 }
 
-.project-card-info{
+.project-card-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -227,7 +228,7 @@ hr {
   font-size: 1rem;
 }
 
-.project-card-heading{
+.project-card-heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -235,7 +236,7 @@ hr {
   margin-bottom: 1rem;
 }
 
-.project-card-heading p{
+.project-card-heading p {
   font-size: 1.8rem;
 }
 
@@ -244,8 +245,8 @@ hr {
   display: inline-block;
   background-color: var(--light-green);
   color: var(--text-color-dark);
-font-family: "poppins", sans-serif;
-font-size: 1.2rem;
+  font-family: "poppins", sans-serif;
+  font-size: 1.2rem;
 
   padding: 0.5rem 0.9rem;
   border-radius: var(--border-radius);
@@ -253,21 +254,22 @@ font-size: 1.2rem;
   margin: 0.2rem;
 }
 
-
 /*-------------Contact---------------*/
 .contact-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-margin-top: 7rem;
+  gap: 1rem;
+  margin-top: 7rem;
+  padding: 0 2rem 4rem 2rem;
   text-align: left;
 }
 
 /*-------------Footer---------------*/
 footer {
   position: relative;
-  bottom:0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -364,7 +366,7 @@ footer a img {
     margin-left: 20%;
   }
 
-  footer{
+  footer {
     flex-direction: row-reverse;
     justify-content: space-around;
   }
@@ -373,8 +375,8 @@ footer a img {
     width: fit-content;
   }
   #footer-signature {
-width: auto;
-}
+    width: auto;
+  }
 
   .link-container {
     margin-left: 30px;
@@ -410,7 +412,7 @@ width: auto;
     display: inline-block;
   }
 
-  .contact-cta span{
+  .contact-cta span {
     color: var(--text-color-dark);
     z-index: 1;
   }
