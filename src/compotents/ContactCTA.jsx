@@ -5,7 +5,7 @@ const MotionNavLink = motion.create(NavLink);
 
 export default function ContactCTA() {
   return (
-    <MotionNavLink to="/contact" className="contact-cta" whileHover="hover">
+    <MotionNavLink to="/kontakt" className="contact-cta" whileHover="hover">
       <motion.div
         className="background"
         variants={{

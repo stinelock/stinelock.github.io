@@ -11,7 +11,7 @@ export default function ContactSection({page}) {
         );
     }
 
-    else if (page === "contact"){
+    else if (page === "kontakt"){
   return (
     <section className="contact-section">
       <h1>Lad os snakke</h1>

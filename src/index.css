@@ -25,7 +25,7 @@ body {
   --light-green: #dff0b9;
   --neon-green: #a8f00c;
   --light-blue: #a8ccff;
-  --grey: #8A8A8A;
+  --grey: #8a8a8a;
   --text-color-light: #f1f1f1;
   --text-color-dark: #33332e;
   --white: #fffef5;
@@ -45,7 +45,7 @@ h1 {
   margin: 0;
   line-height: 117%;
 }
-h2{
+h2 {
   font-size: clamp(2.5rem, 7vw, 4rem);
   margin: 0;
 }
@@ -62,8 +62,15 @@ a {
   color: var(--text-color-dark);
 }
 
-.page{
+p {
+  font-size: 1.3rem;
+  line-height: 150%;
+  margin: 0;
+}
+
+.page {
   padding: 2rem;
+  margin-top: 50px;
 }
 
 /*---------------Nav Bar---------------*/
@@ -193,7 +200,7 @@ hr {
 }
 
 .project-card {
-  font-family: 'graveur-variable', sans-serif;
+  font-family: "graveur-variable", sans-serif;
   background-color: var(--light-blue);
   margin: 1rem;
   padding: 0.8rem;
@@ -203,7 +210,7 @@ hr {
 }
 
 .img-container {
-  background-color: var(--light-green);/*Skal slettes senere*/
+  background-color: var(--light-green); /*Skal slettes senere*/
   position: relative;
   width: 100%;
   height: 300px;
@@ -246,54 +253,59 @@ hr {
 }
 
 /*----------ProjectDetail Page--------*/
-.detailpage .img-container{
+.detailpage .img-container {
   margin-top: 2rem;
   height: 400px;
 }
-.project-detail{
+.project-detail {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin: 2rem 0;
 }
-.project-info{
+.project-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.project-info > :nth-child(1){
-  font-family: 'poppins', sans-serif;
+.project-info > :nth-child(1) {
+  font-family: "poppins", sans-serif;
   font-size: 1rem;
   color: var(--grey);
 }
 
-.project-info :nth-child(2){
+.project-info :nth-child(2) {
   font-size: 1.5rem;
 }
 
-#fokus{
+.project-info-desktop #year {
+  display: none;
+}
+
+#fokus {
   align-items: flex-start;
+  margin: 1rem 0;
 }
 
 .tags-list {
   list-style: none;
-  padding: 0;       
-  margin: 0;       
+  padding: 0;
+  margin: 0;
 }
 
 .tags-list li {
-  margin-bottom: 4px; 
+  margin-bottom: 4px;
 }
 
-.project-links{
+.project-links {
   display: flex;
   gap: 1.5rem;
   font-size: 1.2rem;
 }
 
 .other-projects {
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -302,6 +314,24 @@ hr {
 .other-projects ul {
   list-style: none;
   padding: 0;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.other-projects hr {
+  width: 100%;
+  border: none;
+  border-top: 2px solid var(--text-color-dark);
+  margin: 1rem 0;
+}
+
+.other-projects a {
+  font-family: "graveur-variable", sans-serif;
+  font-size: 2rem;
+}
+
+.other-projects li {
+  margin-bottom: 2rem;
 }
 
 /*------------SkillPill-----------------*/
@@ -330,7 +360,7 @@ hr {
   text-align: left;
 }
 .contact-section h1 {
- margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 /*-------------Footer---------------*/
@@ -453,6 +483,12 @@ footer a img {
 /*----------------Computer-----------------*/
 
 @media (min-width: 992px) {
+  .page {
+    padding: 4rem;
+    margin-top: 80px;
+  }
+
+  /*-------------Nav-----------------*/
   .nav-desktop {
     display: flex;
     flex-direction: row;
@@ -507,6 +543,8 @@ footer a img {
     padding-bottom: 30%;
   }
 
+  /*-------------Project-cards-----------------*/
+
   .project-card {
     margin: 2rem;
     padding: 1.5rem;
@@ -516,5 +554,80 @@ footer a img {
   .img-container {
     width: 350px;
     height: 350px;
+  }
+
+  .project-card p {
+    font-size: 1.4rem;
+  }
+
+  .project-card h2 {
+    font-size: 2.5rem;
+  }
+
+  .project-card-heading p {
+    font-size: 2.2rem;
+  }
+
+  .project-card-info {
+    margin: 2rem;
+    font-size: 1.2rem;
+  }
+
+  /*----------ProjectDetail Page--------*/
+  .project-detail {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 5rem 0;
+  }
+
+  .project-info-desktop #year {
+  display: flex;
+  align-items: flex-start;
+}
+
+.project-info-desktop div{
+margin:2rem 0;
+}
+
+.project-card-heading .project-info{
+  display: none;
+}
+
+  .detailpage .img-container {
+    height: 500px;
+    width: 100%;
+  }
+  .project-imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .project-imgs .img-container {
+    width: 50%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  .other-projects a {
+    font-size: 2.5rem;
+  }
+
+  /*------------SkillPill-----------------*/
+
+  .skill-pill {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  /*-------------Contact---------------*/
+  .contact-section {
+    padding: 0 4rem 4rem 4rem;
+    margin: 0 0 10rem;
+    gap: 1.5rem;
+  }
+  .contact-section .contact-cta {
+    padding: 0.5rem 2rem;
   }
 }
