@@ -25,7 +25,7 @@ body {
   --light-green: #dff0b9;
   --neon-green: #a8f00c;
   --light-blue: #a8ccff;
-  --light-grey: #f1f1f4;
+  --grey: #8A8A8A;
   --text-color-light: #f1f1f1;
   --text-color-dark: #33332e;
   --white: #fffef5;
@@ -58,9 +58,8 @@ a {
   color: var(--text-color-dark);
 }
 
-.page {
-  width: 100%;
-  margin: 0 auto;
+.page{
+  padding: 1rem;
 }
 
 /*---------------Nav Bar---------------*/
@@ -200,6 +199,7 @@ hr {
 }
 
 .img-container {
+  background-color: var(--light-green);/*Skal slettes senere*/
   position: relative;
   width: 100%;
   height: 300px;
@@ -233,12 +233,29 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
 .project-card-heading p {
   font-size: 1.8rem;
+}
+
+/*----------ProjectDetail Page--------*/
+.project-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.project-info :nth-child(1){
+  font-family: 'poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--grey);
+}
+
+.project-info :nth-child(2){
+  font-size: 1.5rem;
 }
 
 /*------------SkillPill-----------------*/

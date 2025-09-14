@@ -19,12 +19,21 @@ export default function ProjectDetailPage() {
   }, [id]);
 
   return (
-    <div className="project-detail">
-      <h1>{project.title}</h1>
-      <p>
-        <strong>År:</strong> {project.year}
-      </p>
-      <p>{project.description}</p>
-    </div>
+    <main className="page">
+      <div className="img-container">
+        <img src={project.image} alt={project.title} />
+      </div>
+      <div className="project-detail">
+        <div className="project-card-heading">
+          <h1>{project.title}</h1>
+          <div className="project-info">
+            <p>ÅR</p>
+            <p>{project.year}</p>
+          </div>
+        </div>
+
+        <p>{project.description}</p>
+      </div>
+    </main>
   );
 }

@@ -2,10 +2,10 @@
   {
     "id": "1",
     "title": "Radar",
-    "year": "2025",
+    "year": "2024",
     "description": "Samlingspunkt for Radars gæster",
     "tags": ["Responsivitet", "Visuel Identitet", "Design"],
-    "image": ["./img/radartlf.jpg","./img/radar1.jpg"],
+    "image": ["/img/radartlf.jpg","/img/radar1.jpg"],
     "links": [
       { "url": "https://stinelock.github.io/Radar/", "text": "Radar Resonans" },
       { "url": "https://github.com/stinelock/Radar", "text": "GitHub Link" }
