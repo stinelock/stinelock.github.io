@@ -5,16 +5,22 @@ import arrowIcon from "/img/arrow-up-right.svg";
 export default function ProjectDetailPage() {
   const { id } = useParams();
   const [project, setProject] = useState({});
+  const [otherProjects, setOtherProjects] = useState([]);
 
   useEffect(() => {
     async function fetchProject() {
       const response = await fetch("/projects.json");
       const projectsData = await response.json();
 
-      const project = projectsData.find((project) => project.id === id);
+      const currentProject = projectsData.find((project) => project.id === id);
 
       console.log(project);
-      setProject(project);
+      setProject(currentProject);
+
+      const filteredProjects = projectsData.filter(
+        (project) => project.id !== id
+      );
+      setOtherProjects(filteredProjects);
     }
     fetchProject();
   }, [id]);
@@ -24,9 +30,9 @@ export default function ProjectDetailPage() {
       <div className="img-container">
         <img src={project.image} alt={project.title} />
       </div>
-      <div className="project-detail">
+      <section className="project-detail">
         <div className="project-card-heading">
-          <h1>{project.title}</h1>
+          <h2>{project.title}</h2>
           <div className="project-info">
             <p>ÅR</p>
             <p>{project.year}</p>
@@ -45,17 +51,27 @@ export default function ProjectDetailPage() {
           {project.links?.map((link, index) => (
             <a key={index} href={link.url} target="_blank" rel="noreferrer">
               {link.text}
-              <img src={arrowIcon}/>
+              <img src={arrowIcon} />
             </a>
           ))}
         </div>
-      </div>
+      </section>
       <div className="img-container">
         <img src={project.image} alt={project.title}></img>
       </div>
       <div className="img-container">
         <img src={project.image} alt={project.title}></img>
       </div>
+      <section className="other-projects">
+        <h2>Flere Projekter</h2>
+        <ul>
+          {otherProjects.map((otherProject) => (
+            <li key={otherProject.id}>
+              <a href={`/project/${otherProject.id}`}>{otherProject.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }

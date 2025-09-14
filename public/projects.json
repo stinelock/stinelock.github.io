@@ -19,7 +19,6 @@
     "tags": ["Responsivitet", "Visuel Identitet", "Redesign"],
     "image": ["/img/fb1.webp"],
     "links": [
-      { "url": "https://cederdorff.github.io", "text": "React Portfolio" },
       { "url": "https://github.com/stinelock/Zero-Buzz-Brew-main", "text": "GitHub Link" }
     ]
   },

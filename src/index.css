@@ -41,9 +41,13 @@ body {
 }
 
 h1 {
-  font-size: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(3rem, 10vw, 8rem);
   margin: 0;
   line-height: 117%;
+}
+h2{
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  margin: 0;
 }
 
 h3 {
@@ -59,7 +63,7 @@ a {
 }
 
 .page{
-  padding: 1rem;
+  padding: 2rem;
 }
 
 /*---------------Nav Bar---------------*/
@@ -286,6 +290,18 @@ hr {
   display: flex;
   gap: 1.5rem;
   font-size: 1.2rem;
+}
+
+.other-projects {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.other-projects ul {
+  list-style: none;
+  padding: 0;
 }
 
 /*------------SkillPill-----------------*/
