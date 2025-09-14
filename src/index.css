@@ -265,6 +265,9 @@ hr {
   padding: 0 2rem 4rem 2rem;
   text-align: left;
 }
+.contact-section h1 {
+ margin-bottom: 2rem;
+}
 
 /*-------------Footer---------------*/
 footer {
