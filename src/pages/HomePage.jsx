@@ -29,7 +29,7 @@ export default function HomePage({scrollTo}) {
   return (
     <>
     <div id="top"></div>
-      <main>
+      <main className="page">
         <section className="intro">
           <div className="heading-mobile">
             <h1>Multi</h1>

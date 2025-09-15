@@ -3,8 +3,8 @@
 export default function About() {
     return (
       <>
-        <main>
-          <h1>About Page</h1>
+        <main className="page">
+          <h1>Legeplads</h1>
         </main>
       </>
     );

@@ -69,7 +69,7 @@ p {
 }
 
 .page {
-  padding: 2rem;
+  padding: 0 0 2rem;
   margin-top: 50px;
 }
 
@@ -195,14 +195,12 @@ hr {
 .project-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem 0;
+  justify-content: space-between;
 }
 
 .project-card {
   font-family: "graveur-variable", sans-serif;
   background-color: var(--light-blue);
-  margin: 1rem;
   padding: 0.8rem;
   text-decoration: none;
   color: var(--text-color-dark);
@@ -442,11 +440,10 @@ footer a img {
 
   .intro {
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 20%;
+    padding-top: 10%;
     padding-bottom: 20%;
   }
 
@@ -546,7 +543,6 @@ footer a img {
   /*-------------Project-cards-----------------*/
 
   .project-card {
-    margin: 2rem;
     padding: 1.5rem;
     max-width: 400px;
   }
@@ -624,10 +620,16 @@ margin:2rem 0;
   /*-------------Contact---------------*/
   .contact-section {
     padding: 0 4rem 4rem 4rem;
-    margin: 0 0 10rem;
+    margin: 2rem 0 10rem;
     gap: 1.5rem;
   }
   .contact-section .contact-cta {
     padding: 0.5rem 2rem;
+  }
+
+  .contact-cta:hover {
+    background-color: var(--neon-green);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
   }
 }
