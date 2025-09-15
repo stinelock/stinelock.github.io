@@ -481,8 +481,8 @@ footer a img {
 
 @media (min-width: 992px) {
   .page {
-    padding: 4rem;
-    margin-top: 80px;
+    padding: 0 4rem;
+    margin-top: 110px;
   }
 
   /*-------------Nav-----------------*/
@@ -578,20 +578,20 @@ footer a img {
   }
 
   .project-info-desktop #year {
-  display: flex;
-  align-items: flex-start;
-}
+    display: flex;
+    align-items: flex-start;
+  }
 
-.project-info-desktop div{
-margin:2rem 0;
-}
+  .project-info-desktop div {
+    margin: 2rem 0;
+  }
 
-.project-card-heading .project-info{
-  display: none;
-}
+  .project-card-heading .project-info {
+    display: none;
+  }
 
   .detailpage .img-container {
-    height: 500px;
+    height: 650px;
     width: 100%;
   }
   .project-imgs {
@@ -630,6 +630,5 @@ margin:2rem 0;
   .contact-cta:hover {
     background-color: var(--neon-green);
     transition: background-color 0.3s ease, color 0.3s ease;
-
   }
 }
