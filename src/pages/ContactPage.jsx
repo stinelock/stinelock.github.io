@@ -4,7 +4,7 @@ export default function ContactPage() {
     return (
       <>
         <main>
-       <ContactSection page="contact"/>
+       <ContactSection page="kontakt"/>
         </main>
       </>
     );

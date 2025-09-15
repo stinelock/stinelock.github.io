@@ -5,7 +5,7 @@ import arrowIcon from "/img/arrow-up-right.svg";
 
 export default function ProjectDetailPage() {
   const { id } = useParams();
-  const [project, setProject] = useState({});
+  const [project, setProject] = useState({ image: [] });
   const [otherProjects, setOtherProjects] = useState([]);
 
   useEffect(() => {
@@ -14,6 +14,8 @@ export default function ProjectDetailPage() {
       const projectsData = await response.json();
 
       const currentProject = projectsData.find((project) => project.id === id);
+      console.log(currentProject);
+
       setProject(currentProject);
 
       const filteredProjects = projectsData.filter(
@@ -27,7 +29,7 @@ export default function ProjectDetailPage() {
   return (
     <main className="page detailpage">
       <div className="img-container">
-        <img src={project.image} alt={project.title} />
+        <img src={project.image[0]} alt={project.title} />
       </div>
       <section className="project-detail">
         <div className="project-card-heading">
@@ -63,10 +65,10 @@ export default function ProjectDetailPage() {
       </section>
       <section className="project-imgs">
         <div className="img-container">
-          <img src={project.image} alt={project.title}></img>
+          <img src={project.image[1]} alt={project.title}></img>
         </div>
         <div className="img-container">
-          <img src={project.image} alt={project.title}></img>
+          <img src={project.image[2]} alt={project.title}></img>
         </div>
       </section>
       <section className="other-projects">

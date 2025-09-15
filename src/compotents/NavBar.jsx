@@ -24,7 +24,7 @@ export default function NavBar() {
       {/* Header med logo og burger-knap */}
       <header className="site-header">
         <NavLink to="/" onClick={closeMenu}>
-          <img src="./img/logo.png" alt="Logo" className="logo" />
+          <img src="/img/logo.png" alt="Logo" className="logo" />
         </NavLink>
 
         {/*Desktop navigation */}
