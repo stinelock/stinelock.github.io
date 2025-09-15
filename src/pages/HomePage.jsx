@@ -9,11 +9,18 @@ export default function HomePage({scrollTo}) {
   const [projects, setProjects] = useState([]);
    const projectRef = useRef(null);
 
-   useEffect(() =>{
+  useEffect(() => {
     if (scrollTo === "projects" && projectRef.current) {
-      projectRef.current.scrollIntoView({ behavior: "smooth" });
+      const topOffset = 100; // justér dette tal som du vil
+      const elementPosition = projectRef.current.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - topOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
-   },[scrollTo]);
+  }, [scrollTo]);
 
   useEffect(() => {
     fetchProjects();
