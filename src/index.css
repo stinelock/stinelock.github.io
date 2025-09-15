@@ -195,7 +195,8 @@ hr {
 .project-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .project-card {
@@ -359,6 +360,48 @@ hr {
 }
 .contact-section h1 {
   margin-bottom: 2rem;
+}
+
+/*-------------Playground-------------*/
+.page-playground{
+margin: 150px 2rem;
+}
+
+.intro-playground{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 430px;
+}
+
+.page-playground .project-imgs{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 100px 0;
+}
+
+.page-playground .project-imgs :nth-child(3){
+  display: none;
+}
+
+.instagram{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: 'poppins', sans-serif;
+}
+
+.instagram a{
+  width: fit-content;
+}
+
+.instagram img{
+  width: 50px;
+  height: 50px;
 }
 
 /*-------------Footer---------------*/
@@ -616,6 +659,28 @@ footer a img {
     font-size: 1rem;
     padding: 0.7rem 1.2rem;
   }
+
+  /*------------PlayGround-------------*/
+  .page-playground .project-imgs{
+  flex-direction: row;
+  gap: 2rem;
+  margin: 100px 4rem;
+
+}
+  .intro-playground{
+    height: 700px;
+    padding:0 4rem 4rem 4rem;
+  }
+
+  .project-imgs .img-container {
+    width: 48%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .page-playground .project-imgs :nth-child(3){
+  display: flex;
+}
 
   /*-------------Contact---------------*/
   .contact-section {
