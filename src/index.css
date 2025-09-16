@@ -164,6 +164,7 @@ hr {
   padding-right: 2rem;
   padding-top: 30%;
   margin-bottom: 100px;
+  overflow: visible;
 }
 
 .heading-mobile {
@@ -177,19 +178,36 @@ hr {
 }
 
 .signature {
+  position: absolute;
+  top: 9%;
+  left: 25%;
   min-width: 261px;
-  height: auto;
+  min-height: 600px;
   max-width: 60%;
 }
 
 .cls-1 {
   fill: none;
   stroke: var(--line-color);
+  stroke-width: 7;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 8px;
   stroke-dasharray: 1000;
 }
+.cls-2 {
+  stroke: var(--line-color);
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /*--------- Project-cards ---------*/
 
 .project-section {
@@ -259,12 +277,20 @@ hr {
   margin-top: 2rem;
   height: 400px;
 }
+
+.img-container video {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
 .project-detail {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin: 2rem 0;
 }
+
 .project-info {
   display: flex;
   flex-direction: column;
@@ -504,11 +530,11 @@ footer a img {
   }
 
   .signature {
-    min-width: 300px;
-    height: auto;
-    min-height: fit-content;
-    max-width: 50%;
-    margin-left: 20%;
+   top: 12%;
+  left: 25%;
+  min-width: 261px;
+  min-height: 600px;
+  max-width: 60%;
   }
 
   footer {
@@ -652,9 +678,9 @@ footer a img {
     justify-content: space-between;
     gap: 1rem;
   }
-  .project-imgs .img-container {
+  .detailpage .project-imgs .img-container {
     width: 50%;
-    height: auto;
+    height: 400px;
   }
 
   .project-imgs .img-container img {
@@ -690,6 +716,10 @@ footer a img {
   .project-imgs .img-container {
     width: 48%;
     height: 500px;
+    object-fit: cover;
+  }
+
+  .project-imgs .img-container img {
     object-fit: cover;
   }
 

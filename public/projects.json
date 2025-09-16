@@ -3,7 +3,7 @@
     "id": "1",
     "title": "Radar",
     "year": "2024",
-    "description": "Projekt er en platform, der skal engagere Radars gæster og skabe et fællesskab omkring spillestedet. Jeg tog udgangspunkt i Radars egen visuelle identitet og ville skabe et legende og eksperimenterende univers, der fanger stemningen af at være til koncert i former og farver. I løsningen har jeg skulle forholde mig til indholdskilder og forskellige skærmstørrelsers mængde af indhold.",
+    "description": "Projektet er en platform, der skal engagere Radars gæster og skabe et fællesskab omkring spillestedet. Jeg tog udgangspunkt i Radars egen visuelle identitet og ville skabe et legende og eksperimenterende univers, der fanger stemningen af at være til koncert i former og farver. I løsningen har jeg skulle forholde mig til indholdskilder og forskellige skærmstørrelsers mængde af indhold.",
     "tags": ["Responsivitet", "Visuel Identitet", "Design"],
     "blueimage": "/img/radartlfblue.png",
     "headerimage": "/img/radartlf.jpg",
@@ -20,10 +20,10 @@
     "id": "2",
     "title": "Forlæns & Baglæns",
     "year": "2024",
-    "description": "Tapasbar i Aarhus fjkewh  hduih  ewio hckop oihwi i ewhewic9eje",
+    "description": "Projektet for tapasrestauranten Forlæns & Baglæns havde fokus på at skabe en mere responsiv og brugervenlig hjemmeside med designmæssige forbedringer. Målet var at indfange restaurantens særlige atmosfære og fysiske rammer i en overskuelig digital platform, der imødekommer gæsternes vigtigste behov.",
     "tags": ["Responsivitet", "Visuel Identitet", "Redesign"],
     "blueimage": "/img/fbblue.png",
-    "headerimage": "/img/radartlf.jpg",
+    "headerimage": "/img/fb1.png",
     "image": [
       "/img/fbdesk.png",
       "/img/fbtablet.png",
@@ -31,7 +31,7 @@
     ],
     "links": [
       {
-        "url": "https://github.com/stinelock/Zero-Buzz-Brew-main",
+        "url": "https://github.com/stinelock/forlaens-baglaens",
         "text": "GitHub Link"
       }
     ]
@@ -40,11 +40,12 @@
     "id": "3",
     "title": "Steno Museet",
     "year": "2025",
-    "description": "Infoskærm til Steno Museet i Aarhus",
-    "tags": ["JavaScript", "Frontend", "Brugerbaseret design"],
-    "headerimage": "/img/radartlf.jpg",
+    "description": "Dette projekt er et bud på interaktiv formidling af menstruation i Stenomuseets udstilling “Den Oversete Krop”. Fokus var på at skabe et positivt og let univers målrettet børn i mellemtrinnet. I udviklingen af skærmen lå fokus især på features styret af JavaScript.",
+    "tags": ["Målgruppestyret design", "Interaktiv formidling", "JavaScript"],
+    "headerimage": "/img/steno2.webp",
     "blueimage": "/img/stenublue.png",
-    "image": ["/img/steno2.webp", "/img/stenomuseum1.webp"],
+    "image": ["/img/steno2.png", "/img/stenovinter.png"],
+    "video":"/video/stenovideo.mp4",
     "links": [
       {
         "url": "http://eksamen2025.designsbymia.dk/",

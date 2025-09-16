@@ -29,8 +29,15 @@ export default function ProjectDetailPage() {
   return (
     <main className="page detailpage">
       <div className="img-container">
-        <img src={project.headerimage} alt={project.title} />
+        {project.video ? (
+          <video autoPlay muted>
+            <source src={project.video} type="video/mp4" />
+          </video>
+        ) : (
+          <img src={project.headerimage} alt={project.title} />
+        )}
       </div>
+
       <section className="project-detail">
         <div className="project-card-heading">
           <h2>{project.title}</h2>
@@ -64,17 +71,11 @@ export default function ProjectDetailPage() {
         </div>
       </section>
       <section className="project-imgs">
-        {project.image?.map((image) => (
-          <div className="img-container">
+        {project.image?.map((image, index) => (
+          <div className="img-container" key={index}>
             <img src={image} alt={project.title} />
           </div>
         ))}
-        {/* <div className="img-container">
-          <img src={project.image[1]} alt={project.title}></img>
-        </div>
-        <div className="img-container">
-          <img src={project.image[2]} alt={project.title}></img>
-        </div> */}
       </section>
       <section className="other-projects">
         <h2>Flere Projekter</h2>

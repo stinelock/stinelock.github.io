@@ -36,7 +36,7 @@ export default function HomePage({scrollTo}) {
 
   return (
     <>
-    <div id="top"></div>
+      <div id="top"></div>
       <main className="page">
         <section className="intro">
           <div className="heading-mobile">
@@ -49,18 +49,19 @@ export default function HomePage({scrollTo}) {
             <h1>Designer</h1>
           </div>
 
-          <SignatureTest />
+          {/* 
+          <SignatureTest /> */}
 
           {/* <Signature /> */}
         </section>
-
+        <Signature />
         <section ref={projectRef} className="project-section">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </section>
-       <SkillSection />
-       <ContactSection page="home"/>
+        <SkillSection />
+        <ContactSection page="home" />
       </main>
     </>
   );

@@ -8,13 +8,13 @@ export default function PlaygroundPage() {
         </section>
         <section className="project-imgs">
           <div className="img-container">
-            <img></img>
+            <img src="img/vin.png"></img>
           </div>
           <div className="img-container">
-            <img></img>
+            <img src="img/sologmaane.png"></img>
           </div>
           <div className="img-container">
-            <img></img>
+            <img src="img/omvendt.png"></img>
           </div>
         </section>
         <section className="project-imgs">
