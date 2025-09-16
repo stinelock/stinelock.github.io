@@ -4,7 +4,7 @@ export default function ProjectCard({ project }) {
   return (
     <NavLink to={`/project/${project.id}`} className="project-card">
       <div className="img-container">
-        <img src={project.image[0]} alt={project.title} />
+        <img src={project.blueimage} alt={project.title} />
       </div>
       <div className="project-card-info">
         <div className="project-card-heading">

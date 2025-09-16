@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import ProjectCard from "../compotents/ProjectCard";
 import Signature from "../compotents/Signature";
+import SignatureTest from "../compotents/SignatureTest";
 import SkillSection from "../compotents/SkillSection";
 import ContactSection from "../compotents/ContactSection";
 
@@ -48,7 +49,9 @@ export default function HomePage({scrollTo}) {
             <h1>Designer</h1>
           </div>
 
-          <Signature />
+          <SignatureTest />
+
+          {/* <Signature /> */}
         </section>
 
         <section ref={projectRef} className="project-section">

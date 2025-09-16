@@ -29,10 +29,10 @@ export default function NavBar() {
 
         {/*Desktop navigation */}
         <nav className="nav-desktop">
-          <NavLink to="/legeplads">LEGEPLADS</NavLink>
           <NavLink to="/" state={{ scrollTo: "projects" }}>
             PROJEKTER
           </NavLink>
+          <NavLink to="/legeplads">LEGEPLADS</NavLink>
           <ContactCTA />
         </nav>
 
@@ -59,16 +59,16 @@ export default function NavBar() {
             variants={menuVariants}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <NavLink to="/legeplads" onClick={closeMenu}>
-              LEGEPLADS
-            </NavLink>
-            <hr />
             <NavLink
               to="/"
               state={{ scrollTo: "projects" }}
               onClick={closeMenu}
             >
               PROJEKTER
+            </NavLink>
+            <hr />
+            <NavLink to="/legeplads" onClick={closeMenu}>
+              LEGEPLADS
             </NavLink>
             <hr />
             <NavLink to="/kontakt" onClick={closeMenu} className="contact-cta">

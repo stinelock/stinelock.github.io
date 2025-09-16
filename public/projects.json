@@ -3,9 +3,14 @@
     "id": "1",
     "title": "Radar",
     "year": "2024",
-    "description": "Samlingspunkt for Radars gæster bvbfjbjd  hfewhiu  udi hv  fhuiweh j  dsjfoj o",
+    "description": "Projekt er en platform, der skal engagere Radars gæster og skabe et fællesskab omkring spillestedet. Jeg tog udgangspunkt i Radars egen visuelle identitet og ville skabe et legende og eksperimenterende univers, der fanger stemningen af at være til koncert i former og farver. I løsningen har jeg skulle forholde mig til indholdskilder og forskellige skærmstørrelsers mængde af indhold.",
     "tags": ["Responsivitet", "Visuel Identitet", "Design"],
-    "image": ["/img/radartlf.jpg", "/img/radar1.jpg"],
+    "blueimage": "/img/radartlfblue.png",
+    "headerimage": "/img/radartlf.jpg",
+    "image": [
+      "/img/radardesk1.png",
+      "/img/radarphone.png"
+    ],
     "links": [
       { "url": "https://stinelock.github.io/Radar/", "text": "Website" },
       { "url": "https://github.com/stinelock/Radar", "text": "GitHub Link" }
@@ -17,7 +22,13 @@
     "year": "2024",
     "description": "Tapasbar i Aarhus fjkewh  hduih  ewio hckop oihwi i ewhewic9eje",
     "tags": ["Responsivitet", "Visuel Identitet", "Redesign"],
-    "image": ["/img/fb1.webp"],
+    "blueimage": "/img/fbblue.png",
+    "headerimage": "/img/radartlf.jpg",
+    "image": [
+      "/img/fbdesk.png",
+      "/img/fbtablet.png",
+      "/img/fbtlf.png"
+    ],
     "links": [
       {
         "url": "https://github.com/stinelock/Zero-Buzz-Brew-main",
@@ -31,6 +42,8 @@
     "year": "2025",
     "description": "Infoskærm til Steno Museet i Aarhus",
     "tags": ["JavaScript", "Frontend", "Brugerbaseret design"],
+    "headerimage": "/img/radartlf.jpg",
+    "blueimage": "/img/stenublue.png",
     "image": ["/img/steno2.webp", "/img/stenomuseum1.webp"],
     "links": [
       {
