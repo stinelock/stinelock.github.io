@@ -20,7 +20,7 @@ export default function Footer() {
             LINKEDIN
             <img src={arrowIcon} alt="LinkedIn" />
           </a>
-          <a href="https://www.linkedin.com/in/stine-blaabjerg-lock-276558325/">
+          <a href="https://www.instagram.com/stines.streger?utm_source=ig_web_button_share_sheet&igsh=Mms4MmM5d2N0MHM1">
             INSTAGRAM
             <img src={arrowIcon} alt="Instagram" />
           </a>
