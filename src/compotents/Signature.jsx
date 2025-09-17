@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 
 export default function Signature() {
   const [paths, setPaths] = useState([]);
+  const [viewBox, setViewBox] = useState("");
   const { scrollYProgress } = useScroll();
 
   const pathRef = useRef(null);
@@ -16,7 +17,10 @@ export default function Signature() {
     const res = await fetch("/signature.json");
     const data = await res.json();
 
-    setPaths(data);
+   const isMobile = window.innerWidth < 768;
+   const selected = isMobile ? data.mobile : data.desktop;
+   setViewBox(selected.viewBox);
+   setPaths(selected.paths);
   }
 
   console.log(paths);
@@ -26,7 +30,7 @@ export default function Signature() {
       id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 676.21 2870.06"
+      viewBox={viewBox}
       className="signature"
     >
       <g id="Layer_1-2" data-name="Layer 1-2">
