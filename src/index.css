@@ -180,10 +180,24 @@ hr {
 .signature {
   position: absolute;
   top: 9%;
-  left: 25%;
+  left: 10%;
   min-width: 261px;
   min-height: 600px;
-  max-width: 60%;
+  max-width: 300px;
+}
+
+.signature-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#phone{
+  width: 30%;
 }
 
 .cls-1 {
@@ -532,9 +546,9 @@ footer a img {
   .signature {
    top: 12%;
   left: 25%;
-  min-width: 261px;
+  min-width: 200px;
   min-height: 600px;
-  max-width: 60%;
+  max-width: 50%;
   }
 
   footer {

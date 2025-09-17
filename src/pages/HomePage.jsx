@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import ProjectCard from "../compotents/ProjectCard";
 import Signature from "../compotents/Signature";
-import SignatureTest from "../compotents/SignatureTest";
 import SkillSection from "../compotents/SkillSection";
 import ContactSection from "../compotents/ContactSection";
 
@@ -9,6 +8,8 @@ import ContactSection from "../compotents/ContactSection";
 export default function HomePage({scrollTo}) {
   const [projects, setProjects] = useState([]);
    const projectRef = useRef(null);
+   const introRef = useRef(null);
+   const contactRef = useRef(null);
 
   useEffect(() => {
     if (scrollTo === "projects" && projectRef.current) {
@@ -38,7 +39,7 @@ export default function HomePage({scrollTo}) {
     <>
       <div id="top"></div>
       <main className="page">
-        <section className="intro">
+        <section ref={introRef} className="intro">
           <div className="heading-mobile">
             <h1>Multi</h1>
             <h1>Medie</h1>
@@ -49,19 +50,16 @@ export default function HomePage({scrollTo}) {
             <h1>Designer</h1>
           </div>
 
-          {/* 
-          <SignatureTest /> */}
-
-          {/* <Signature /> */}
+          <Signature />
         </section>
-        <Signature />
+
         <section ref={projectRef} className="project-section">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </section>
         <SkillSection />
-        <ContactSection page="home" />
+        <ContactSection ref={contactRef} page="home" />
       </main>
     </>
   );
