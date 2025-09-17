@@ -194,9 +194,6 @@ hr {
   height: 100%;
 }
 
-#phone {
-  width: 30%;
-}
 
 .cls-1 {
   fill: none;
@@ -530,7 +527,7 @@ footer a img {
   }
 
   .intro {
-    height:45vh;
+    height: 45vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -542,23 +539,23 @@ footer a img {
   h1 {
     line-height: 100%;
   }
-.signature-container {
-  position: absolute;
-  top: 50%;
-  left: 65%; 
-  transform: translateX(-50%); 
-  width: 100%; 
-  max-width: 600px; 
-  height: auto; 
-  pointer-events: none; 
-  z-index: 0; 
-}
+  .signature-container {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-.signature {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .signature {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   footer {
     flex-direction: row-reverse;
@@ -642,23 +639,22 @@ footer a img {
   }
 
   .signature-container {
-  position: absolute;
-  top: 50%;
-  left: 65%; 
-  transform: translateX(-50%); 
-  width: 100%; 
-  max-width: 600px; 
-  height: auto; 
-  pointer-events: none; 
-  z-index: 0; 
-}
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-.signature {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
+  .signature {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   /*-------------Project-cards-----------------*/
 

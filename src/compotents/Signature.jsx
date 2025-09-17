@@ -6,6 +6,7 @@ export default function Signature({ introRef, contactRef }) {
   const [viewBox, setViewBox] = useState("0 0 800 2850");
   const [svgHeight, setSvgHeight] = useState("auto"); // state til svg højde
   const [imagePosition, setImagePosition] = useState({ top: 0, left: 0 });
+  const isMobile = window.innerWidth < 768; // check om det er mobil
 
   const { scrollYProgress } = useScroll(); // scroll progress for hele siden
 
@@ -20,7 +21,6 @@ export default function Signature({ introRef, contactRef }) {
     const data = await res.json();
 
     // Vælg mellem mobile og desktop paths
-    const isMobile = window.innerWidth < 768;
     const selected = isMobile ? data.mobile : data.desktop;
     setViewBox(selected.viewBox);
     setPaths(selected.paths);
@@ -40,13 +40,10 @@ export default function Signature({ introRef, contactRef }) {
 
           const height = contactTop - introBottom;
 
-          if (window.innerWidth < 768) {
-            // Mobile: Use auto height for responsiveness
-            setSvgHeight("auto");
-          } else {
-            // Tablet/Desktop: Set explicit height
-            setSvgHeight(height > 0 ? height : 0);
-          }
+          isMobile
+            ? setSvgHeight("auto")
+            : setSvgHeight(height > 0 ? height : 0);
+
         }
       }
 
@@ -119,9 +116,9 @@ useEffect(() => {
           {paths.map((path, index) => {
             const isLastPath = index === paths.length - 1;
 
-              const MotionPath = React.forwardRef((props, ref) => {
-                return <motion.path {...props} ref={ref} />;
-              });
+            const MotionPath = React.forwardRef((props, ref) => {
+              return <motion.path {...props} ref={ref} />;
+            });
 
             const setPathRef = (el) => {
               console.log("setPathRef called for element:", el);
@@ -174,13 +171,14 @@ useEffect(() => {
       <img
         src="/img/phone.png"
         alt="Phone"
+        className="phone"
         style={{
           position: "absolute",
           top: `${imagePosition.top}px`,
           left: `${imagePosition.left}px`,
-          transform: "translate(-50%, -20%)", // Center the image at the end of the path
-          width: "100px", // Adjust the size of the image
-          height: "auto", // Maintain aspect ratio
+          transform: "translate(-60%, -15%)",
+          width: isMobile ? "100px" : "200px",
+          height: "auto",
           zIndex: 0,
         }}
       />
