@@ -18,7 +18,7 @@ export default function SkillPills() {
   );
 
   return (
-    <div className="skill-container" style={{ position: "relative", height: "150vh", marginTop:"2rem" }}>
+    <div className="skill-container">
       {skills.map(({ text, top, left, rotation }, i) => (
         <motion.div
           key={i}

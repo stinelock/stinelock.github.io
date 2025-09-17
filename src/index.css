@@ -179,10 +179,10 @@ hr {
 
 .signature {
   position: absolute;
-  top: 9%;
+  top:0;
   left: 10%;
   min-width: 261px;
-  min-height: 600px;
+ height:100%;
   max-width: 300px;
 }
 
@@ -383,6 +383,11 @@ svg {
 }
 
 /*------------SkillPill-----------------*/
+.skill-container{
+  position: relative;
+  min-height: 80vh;
+  margin-top: 2rem;
+}
 .skill-pill {
   display: inline-block;
   background-color: var(--light-green);
@@ -710,6 +715,10 @@ footer a img {
   }
 
   /*------------SkillPill-----------------*/
+.skill-container{
+  position: relative;
+  min-height: 100vh;
+}
 
   .skill-pill {
     font-size: 1rem;
