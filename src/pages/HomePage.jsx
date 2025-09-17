@@ -5,7 +5,7 @@ import SkillSection from "../compotents/SkillSection";
 import ContactSection from "../compotents/ContactSection";
 
 
-export default function HomePage({scrollTo, setActiveSection}) {
+export default function HomePage({scrollTo}) {
   const [projects, setProjects] = useState([]);
    const projectRef = useRef(null);
    const introRef = useRef(null);
