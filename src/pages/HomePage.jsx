@@ -5,7 +5,7 @@ import SkillSection from "../compotents/SkillSection";
 import ContactSection from "../compotents/ContactSection";
 
 
-export default function HomePage({scrollTo}) {
+export default function HomePage({scrollTo, setActiveSection}) {
   const [projects, setProjects] = useState([]);
    const projectRef = useRef(null);
    const introRef = useRef(null);
@@ -37,6 +37,7 @@ export default function HomePage({scrollTo}) {
     setProjects(data);
     console.log(data);
   }
+  
 
   return (
     <>

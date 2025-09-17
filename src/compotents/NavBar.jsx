@@ -1,10 +1,17 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import ContactCTA from "./ContactCTA";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    closeMenu();
+    navigate("/", { state: { scrollTo: "top" } }); // Pass state to trigger scroll-to-top
+  };
+
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -12,6 +19,7 @@ export default function NavBar() {
 
   const closeMenu = () => {
     setIsOpen(false);
+
   };
 
   const menuVariants = {
@@ -23,7 +31,7 @@ export default function NavBar() {
     <>
       {/* Header med logo og burger-knap */}
       <header className="site-header">
-        <NavLink to="/" onClick={closeMenu}>
+        <NavLink to="/" onClick={handleLogoClick}>
           <img src="/img/logo.png" alt="Logo" className="logo" />
         </NavLink>
 

@@ -142,9 +142,6 @@ hr {
   z-index: 20; /* over menu overlay */
 }
 
-.active {
-}
-
 .logo {
   text-decoration: none;
   width: 60px;
@@ -594,6 +591,10 @@ footer a img {
   nav {
     padding: 0;
   }
+
+  nav .active {
+font-weight: 600;
+}
 
   nav a:hover {
     color: var(--neon-green);
