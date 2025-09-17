@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
 export default function Signature({ introRef, contactRef }) {
@@ -11,6 +11,7 @@ export default function Signature({ introRef, contactRef }) {
 
   const svgRef = useRef(null); // ref til SVG-elementet
   const pathRef = useRef(null); // ref til DOM-elementet med ref={pathRef}
+  const imageRef = useRef(null); // ref til billedet
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]); //pathLength er værdien mellem 0-1 der afspejler scrollYProgress
 
   //Fetch data
@@ -58,34 +59,48 @@ export default function Signature({ introRef, contactRef }) {
     setupSvg();
   }, [introRef, contactRef]);
 
-  useEffect(() => {
-  console.log("Paths:", paths);
-  console.log("SVG Ref:", svgRef.current);
-  console.log("Path Ref:", pathRef.current);
-
-    // Calculate the position of the image when the path is available
+useEffect(() => {
+  const calculateImagePosition = () => {
     if (pathRef.current && svgRef.current) {
-      console.log("Path Ref:", pathRef.current);
-      console.log("SVG Ref:", svgRef.current);
-
       const pathLength = pathRef.current.getTotalLength();
-      console.log("Path Length:", pathLength);
+      const endPoint = pathRef.current.getPointAtLength(pathLength);
 
-      const endPoint = pathRef.current.getPointAtLength(pathLength); // Get the end point of the path
-      console.log("End Point:", endPoint);
-      // Get the bounding box of the SVG in the viewport
-      const svgRect = svgRef.current.getBoundingClientRect();
-      console.log("SVG Rect:", svgRect);
+      const svg = svgRef.current;
+      const point = svg.createSVGPoint();
+      point.x = endPoint.x;
+      point.y = endPoint.y;
 
-      // Calculate the position of the image relative to the viewport
+      // Konverter til skærmkoordinater
+      const transformed = point.matrixTransform(svg.getScreenCTM());
+
+      // Find containerens bounding box
+      const containerRect = svg.parentElement.getBoundingClientRect();
+
+      // Juster så top/left bliver relative til containeren
       setImagePosition({
-        top: svgRect.top + endPoint.y,
-        left: svgRect.left + endPoint.x,
+        top: transformed.y - containerRect.top,
+        left: transformed.x - containerRect.left,
       });
-    } else {
-      console.log("Path Ref or SVG Ref is null");
     }
-  }, [paths, svgHeight]);
+  };
+
+  calculateImagePosition();
+
+  const resizeObserver = new ResizeObserver(() => {
+    calculateImagePosition();
+  });
+
+  if (imageRef.current) {
+    resizeObserver.observe(imageRef.current);
+  }
+
+  // Cleanup function
+  return () => {
+    resizeObserver.disconnect();
+  };
+}, [paths, svgHeight]);
+
+
 
   console.log(imagePosition);
 
@@ -102,14 +117,33 @@ export default function Signature({ introRef, contactRef }) {
       >
         <g id="Layer_1-2" data-name="Layer 1-2">
           {paths.map((path, index) => {
+            const isLastPath = index === paths.length - 1;
+
+              const MotionPath = React.forwardRef((props, ref) => {
+                return <motion.path {...props} ref={ref} />;
+              });
+
+            const setPathRef = (el) => {
+              console.log("setPathRef called for element:", el);
+              if (isLastPath) {
+                pathRef.current = el; // Assign the DOM element to the ref
+                console.log("Assigned Path Ref:", pathRef.current);
+              }
+            };
+
             const MotionComponent = motion.path;
 
             if (path.scroll) {
               // Scroll-baseret animation (path med scroll: true)
               return (
-                <MotionComponent
+                <MotionPath
                   key={index}
-                  ref={index == path.length - 1 ? pathRef : null}
+                  ref={(el) => {
+                    if (isLastPath) {
+                      pathRef.current = el; // Assign the DOM element to the ref
+                      console.log("Assigned Path Ref:", pathRef.current);
+                    }
+                  }}
                   d={path.d}
                   className={path.className}
                   initial={{ pathLength: 0 }}
@@ -119,9 +153,10 @@ export default function Signature({ introRef, contactRef }) {
             } else {
               // Automatisk animation
               return (
-                <MotionComponent
+                <MotionPath
                   key={index}
                   className={path.className}
+                  ref={setPathRef}
                   d={path.d}
                   initial={{ strokeDashoffset: 1000 }}
                   animate={{ strokeDashoffset: 0 }}
@@ -143,9 +178,10 @@ export default function Signature({ introRef, contactRef }) {
           position: "absolute",
           top: `${imagePosition.top}px`,
           left: `${imagePosition.left}px`,
-          transform: "translate(-50%, -50%)", // Center the image at the end of the path
-          width: "50px", // Adjust the size of the image
+          transform: "translate(-50%, -20%)", // Center the image at the end of the path
+          width: "100px", // Adjust the size of the image
           height: "auto", // Maintain aspect ratio
+          zIndex: 0,
         }}
       />
     </div>
