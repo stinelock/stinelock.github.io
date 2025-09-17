@@ -159,7 +159,7 @@ hr {
 /*--------- Intro Section ---------*/
 
 .intro {
-  height: 100vh;
+  height: 70vh;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 30%;
@@ -179,7 +179,7 @@ hr {
 
 .signature {
   position: absolute;
-  top:0;
+  top:-5%;
   left: 10%;
   min-width: 261px;
  height:100%;

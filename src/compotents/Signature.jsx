@@ -113,7 +113,7 @@ export default function Signature({ introRef, contactRef }) {
           position: "absolute",
           left: `${endPoint.x}px`,
           top: `${endPoint.y}px`,
-          transform: "translate(-55%, -10%)", // justér efter behov
+          transform: "translate(-60%, -8%)", // justér efter behov
           pointerEvents: "none",
         }}
       />
