@@ -5,7 +5,7 @@ export default function Signature({ introRef, contactRef }) {
   const [paths, setPaths] = useState([]); // array til pathobjekter
   const { scrollYProgress } = useScroll(); // scroll progress for hele siden
   const [viewBox, setViewBox] = useState("0 0 800 2850");
-  const [svgHeight, setSvgHeight] = useState(2850); // state til svg højde
+  const [svgHeight, setSvgHeight] = useState("auto"); // state til svg højde
 
   const pathRef = useRef(null); // ref til DOM-elementet med ref={pathRef}
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]); //pathLength er værdien mellem 0-1 der afspejler scrollYProgress
@@ -31,14 +31,21 @@ export default function Signature({ introRef, contactRef }) {
             introRef.current.offsetTop + introRef.current.offsetHeight;
 
           const contactTop = contactRef.current.offsetTop;
-          const marginCorrection = 20; // juster efter behov
 
-          const height = contactTop - introBottom - marginCorrection;
-          setSvgHeight(height > 0 ? height : 0);
+          const height = contactTop - introBottom;
+        
+          if (window.innerWidth < 768) {
+          // Mobile: Use auto height for responsiveness
+          setSvgHeight("auto");
+        
+        } else {
+          // Tablet/Desktop: Set explicit height
+            setSvgHeight(height > 0 ? height : 0);
+        }
         }
       }
 
-      updateSvgHeight(); // Step 2: opdater højde
+      updateSvgHeight();
 
       window.addEventListener("resize", updateSvgHeight);
       return () => window.removeEventListener("resize", updateSvgHeight);
@@ -55,7 +62,8 @@ export default function Signature({ introRef, contactRef }) {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox={viewBox}
-      style={{ height: svgHeight }} // sætter svg højde dynamisk
+      style={{ width: "100%", height: svgHeight }} // sætter svg højde dynamisk
+      preserveAspectRatio="xMidYMid meet"
     >
       <g id="Layer_1-2" data-name="Layer 1-2">
         {paths.map((path, index) => {

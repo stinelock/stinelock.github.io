@@ -96,7 +96,7 @@ nav a {
 }
 
 .burger-btn {
-  font-family: 'poppins', sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 1.2rem;
   background: none;
   border: none;
@@ -161,8 +161,8 @@ hr {
 
 .intro {
   position: relative;
- height: 80vh;
- padding: 10rem 2rem 2rem;
+  height: 80vh;
+  padding: 10rem 2rem 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 100px 0;
@@ -181,6 +181,7 @@ hr {
 
 .signature-container {
   position: relative;
+  top: 0;
   width: 100%;
   height: auto;
   pointer-events: none;
@@ -193,7 +194,7 @@ hr {
   height: 100%;
 }
 
-#phone{
+#phone {
   width: 30%;
 }
 
@@ -213,7 +214,6 @@ hr {
   stroke-linejoin: round;
 }
 
-
 /*--------- Project-cards ---------*/
 
 .project-section {
@@ -230,6 +230,7 @@ hr {
   text-decoration: none;
   color: var(--text-color-dark);
   max-width: 326px;
+  z-index: 3;
 }
 
 .img-container {
@@ -375,7 +376,7 @@ hr {
 }
 
 /*------------SkillPill-----------------*/
-.skill-container{
+.skill-container {
   position: relative;
   min-height: 80vh;
   margin-top: 2rem;
@@ -529,9 +530,10 @@ footer a img {
   }
 
   .intro {
+    height:45vh;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding-top: 10%;
     padding-bottom: 20%;
@@ -540,14 +542,23 @@ footer a img {
   h1 {
     line-height: 100%;
   }
+.signature-container {
+  position: absolute;
+  top: 50%;
+  left: 65%; 
+  transform: translateX(-50%); 
+  width: 100%; 
+  max-width: 600px; 
+  height: auto; 
+  pointer-events: none; 
+  z-index: 0; 
+}
 
-  .signature {
-   top: 12%;
-  left: 25%;
-  min-width: 200px;
-  min-height: 600px;
-  max-width: 50%;
-  }
+.signature {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
   footer {
     flex-direction: row-reverse;
@@ -627,7 +638,27 @@ footer a img {
 
   .intro {
     padding-bottom: 30%;
+    height: 100vh;
   }
+
+  .signature-container {
+  position: absolute;
+  top: 50%;
+  left: 65%; 
+  transform: translateX(-50%); 
+  width: 100%; 
+  max-width: 600px; 
+  height: auto; 
+  pointer-events: none; 
+  z-index: 0; 
+}
+
+.signature {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
   /*-------------Project-cards-----------------*/
 
@@ -708,10 +739,10 @@ footer a img {
   }
 
   /*------------SkillPill-----------------*/
-.skill-container{
-  position: relative;
-  min-height: 100vh;
-}
+  .skill-container {
+    position: relative;
+    min-height: 100vh;
+  }
 
   .skill-pill {
     font-size: 1rem;

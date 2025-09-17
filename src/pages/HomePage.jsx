@@ -52,7 +52,6 @@ export default function HomePage({scrollTo}) {
             <h1>Multimedie</h1>
             <h1>Designer</h1>
           </div>
-
           <div className="signature-container">
             <Signature introRef={introRef} contactRef={contactRef} />
           </div>
