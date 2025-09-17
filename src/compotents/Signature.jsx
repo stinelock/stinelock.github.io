@@ -10,9 +10,9 @@ export default function Signature({ introRef, contactRef }) {
   const pathRef = useRef(null); // ref til DOM-elementet med ref={pathRef}
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]); //pathLength er værdien mellem 0-1 der afspejler scrollYProgress
 
-  useEffect(() => {
-    fetchSignature();
-  }, []);
+  // useEffect(() => {
+  //   fetchSignature();
+  // }, []);
 
   async function fetchSignature() {
     const res = await fetch("/signature.json"); //fetch data
