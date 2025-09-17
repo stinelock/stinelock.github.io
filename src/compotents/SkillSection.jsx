@@ -4,10 +4,10 @@ const skills = [
   { text: "VS Code", top: "10%", left: "15%", speed: 50, rotation: 5 },
   { text: "GitHub", top: "20%", left: "60%", speed: -80, rotation: -10 },
   { text: "React", top: "18%", left: "25%", speed: 120, rotation: 15 },
-  { text: "Figma", top: "30%", left: "50%", speed: -60, rotation: 0 },
+  { text: "Figma", top: "30%", left: "40%", speed: -60, rotation: 0 },
   { text: "Photoshop", top: "30%", left: "30%", speed: 100, rotation: -5 },
-  { text: "Illustrator", top: "53%", left: "50%", speed: -90, rotation: 10 },
-  { text: "AfterEffect", top: "48%", left: "30%", speed: 70, rotation: -15 },
+  { text: "Illustrator", top: "62%", left: "50%", speed: -90, rotation: 10 },
+  { text: "AfterEffect", top: "55%", left: "30%", speed: 70, rotation: -15 },
 ];
 export default function SkillPills() {
   const { scrollYProgress } = useScroll();

@@ -13,14 +13,17 @@ export default function HomePage({scrollTo}) {
 
   useEffect(() => {
     if (scrollTo === "projects" && projectRef.current) {
-      const topOffset = 100; // justér dette tal som du vil
+      const topOffset = 100; // Adjust this value as needed
       const elementPosition = projectRef.current.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - topOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      // Ensure the ref is hydrated before scrolling
+      if (projectRef.current) {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   }, [scrollTo]);
 
@@ -50,7 +53,9 @@ export default function HomePage({scrollTo}) {
             <h1>Designer</h1>
           </div>
 
-          <Signature />
+          <div className="signature-container">
+            <Signature introRef={introRef} contactRef={contactRef} />
+          </div>
         </section>
 
         <section ref={projectRef} className="project-section">
