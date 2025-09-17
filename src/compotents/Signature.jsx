@@ -10,10 +10,6 @@ export default function Signature({ introRef, contactRef }) {
   const pathRef = useRef(null); // ref til DOM-elementet med ref={pathRef}
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]); //pathLength er værdien mellem 0-1 der afspejler scrollYProgress
 
-  // useEffect(() => {
-  //   fetchSignature();
-  // }, []);
-
   async function fetchSignature() {
     const res = await fetch("/signature.json"); //fetch data
     const data = await res.json();
@@ -32,10 +28,12 @@ export default function Signature({ introRef, contactRef }) {
       function updateSvgHeight() {
         if (introRef?.current && contactRef?.current) {
           const introBottom =
-            introRef.current.getBoundingClientRect().bottom + window.scrollY;
-          const contactTop =
-            contactRef.current.getBoundingClientRect().top + window.scrollY;
-          const height = contactTop - introBottom;
+            introRef.current.offsetTop + introRef.current.offsetHeight;
+
+          const contactTop = contactRef.current.offsetTop;
+          const marginCorrection = 20; // juster efter behov
+
+          const height = contactTop - introBottom - marginCorrection;
           setSvgHeight(height > 0 ? height : 0);
         }
       }
@@ -57,7 +55,7 @@ export default function Signature({ introRef, contactRef }) {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox={viewBox}
-      style={{height: svgHeight}} // sætter svg højde dynamisk
+      style={{ height: svgHeight }} // sætter svg højde dynamisk
     >
       <g id="Layer_1-2" data-name="Layer 1-2">
         {paths.map((path, index) => {

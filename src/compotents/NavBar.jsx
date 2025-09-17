@@ -43,7 +43,7 @@ export default function NavBar() {
           aria-controls="main-navigation"
           onClick={toggleMenu}
         >
-          {isOpen ? "Close" : "Menu"}
+          {isOpen ? "Luk" : "Menu"}
         </div>
       </header>
 

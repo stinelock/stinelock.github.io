@@ -96,6 +96,7 @@ nav a {
 }
 
 .burger-btn {
+  font-family: 'poppins', sans-serif;
   font-size: 1.2rem;
   background: none;
   border: none;
@@ -160,7 +161,8 @@ hr {
 
 .intro {
   position: relative;
-  height: 70vh;
+ height: 80vh;
+ padding: 10rem 2rem 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 100px 0;
@@ -393,6 +395,7 @@ hr {
 
 /*-------------Contact---------------*/
 .contact-section {
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
