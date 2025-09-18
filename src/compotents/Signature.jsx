@@ -2,18 +2,18 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
 export default function Signature({ introRef, contactRef }) {
-  const [paths, setPaths] = useState([]); // array til pathobjekter
+  const [paths, setPaths] = useState([]);
   const [viewBox, setViewBox] = useState("0 0 800 2850");
-  const [svgHeight, setSvgHeight] = useState("auto"); // state til svg højde
+  const [svgHeight, setSvgHeight] = useState("auto");
   const [imagePosition, setImagePosition] = useState({ top: 0, left: 0 });
-  const isMobile = window.innerWidth < 768; // check om det er mobil
+  const isMobile = window.innerWidth < 768;
 
-  const { scrollYProgress } = useScroll(); // scroll progress for hele siden
+  const { scrollYProgress } = useScroll();
 
-  const svgRef = useRef(null); // ref til SVG-elementet
-  const pathRef = useRef(null); // ref til DOM-elementet med ref={pathRef}
-  const imageRef = useRef(null); // ref til billedet
-  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]); //pathLength er værdien mellem 0-1 der afspejler scrollYProgress
+  const svgRef = useRef(null);
+  const pathRef = useRef(null);
+  const imageRef = useRef(null);
+  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   //Fetch data
   async function fetchSignature() {
@@ -29,7 +29,7 @@ export default function Signature({ introRef, contactRef }) {
   //dynamisk kalkulering af svg højde baseret på intro og contact sektioner
   useEffect(() => {
     async function setupSvg() {
-      await fetchSignature(); // Step 1: hent paths
+      await fetchSignature();
 
       function updateSvgHeight() {
         if (introRef?.current && contactRef?.current) {
@@ -43,7 +43,6 @@ export default function Signature({ introRef, contactRef }) {
           isMobile
             ? setSvgHeight("auto")
             : setSvgHeight(height > 0 ? height : 0);
-
         }
       }
 
@@ -56,50 +55,46 @@ export default function Signature({ introRef, contactRef }) {
     setupSvg();
   }, [introRef, contactRef]);
 
-useEffect(() => {
-  const calculateImagePosition = () => {
-    if (pathRef.current && svgRef.current) {
-      const pathLength = pathRef.current.getTotalLength();
-      const endPoint = pathRef.current.getPointAtLength(pathLength);
+  useEffect(() => {
+    const calculateImagePosition = () => {
+      if (pathRef.current && svgRef.current) {
+        const pathLength = pathRef.current.getTotalLength();
+        const endPoint = pathRef.current.getPointAtLength(pathLength);
 
-      const svg = svgRef.current;
-      const point = svg.createSVGPoint();
-      point.x = endPoint.x;
-      point.y = endPoint.y;
+        const svg = svgRef.current;
+        const point = svg.createSVGPoint();
+        point.x = endPoint.x;
+        point.y = endPoint.y;
 
-      // Konverter til skærmkoordinater
-      const transformed = point.matrixTransform(svg.getScreenCTM());
+        // Konverter til skærmkoordinater
+        const transformed = point.matrixTransform(svg.getScreenCTM());
 
-      // Find containerens bounding box
-      const containerRect = svg.parentElement.getBoundingClientRect();
+        // Find containerens bounding box
+        const containerRect = svg.parentElement.getBoundingClientRect();
 
-      // Juster så top/left bliver relative til containeren
-      setImagePosition({
-        top: transformed.y - containerRect.top,
-        left: transformed.x - containerRect.left,
-      });
-    }
-  };
+        // Juster så top/left bliver relative til containeren
+        setImagePosition({
+          top: transformed.y - containerRect.top,
+          left: transformed.x - containerRect.left,
+        });
+      }
+    };
 
-  calculateImagePosition();
-
-  const resizeObserver = new ResizeObserver(() => {
     calculateImagePosition();
-  });
 
-  if (imageRef.current) {
-    resizeObserver.observe(imageRef.current);
-  }
+    const resizeObserver = new ResizeObserver(() => {
+      calculateImagePosition();
+    });
 
-  // Cleanup function
-  return () => {
-    resizeObserver.disconnect();
-  };
-}, [paths, svgHeight]);
+    if (imageRef.current) {
+      resizeObserver.observe(imageRef.current);
+    }
 
-
-
-  console.log(imagePosition);
+    // Cleanup function
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [paths, svgHeight]);
 
   return (
     <div style={{ position: "relative" }}>
@@ -109,36 +104,27 @@ useEffect(() => {
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox={viewBox}
-        style={{ width: "100%", height: svgHeight }} // sætter svg højde dynamisk
+        style={{ width: "100%", height: svgHeight }}
         preserveAspectRatio="xMidYMid meet"
       >
         <g id="Layer_1-2" data-name="Layer 1-2">
           {paths.map((path, index) => {
-            const isLastPath = index === paths.length - 1;
-
             const MotionPath = React.forwardRef((props, ref) => {
               return <motion.path {...props} ref={ref} />;
             });
-
+            const isLastPath = index === paths.length - 1;
             const setPathRef = (el) => {
-              console.log("setPathRef called for element:", el);
               if (isLastPath) {
-                pathRef.current = el; // Assign the DOM element to the ref
-                console.log("Assigned Path Ref:", pathRef.current);
+                pathRef.current = el;
               }
             };
-
-            const MotionComponent = motion.path;
-
             if (path.scroll) {
-              // Scroll-baseret animation (path med scroll: true)
               return (
                 <MotionPath
                   key={index}
                   ref={(el) => {
                     if (isLastPath) {
-                      pathRef.current = el; // Assign the DOM element to the ref
-                      console.log("Assigned Path Ref:", pathRef.current);
+                      pathRef.current = el;
                     }
                   }}
                   d={path.d}

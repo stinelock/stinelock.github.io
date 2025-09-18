@@ -592,12 +592,8 @@ footer a img {
     padding: 0;
   }
 
-  nav .active {
-font-weight: 600;
-}
-
   nav a:hover {
-    color: var(--neon-green);
+    font-weight: 600;
     transition: color 0.3s ease;
   }
 
