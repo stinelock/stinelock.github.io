@@ -28,7 +28,7 @@ export default function ProjectDetailPage() {
 
   return (
     <main className="page detailpage">
-      <div className="img-container">
+      <div className="img-container" id="detail-hero">
         {project.video ? (
           <video autoPlay muted>
             <source src={project.video} type="video/mp4" />

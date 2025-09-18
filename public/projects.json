@@ -13,7 +13,7 @@
     ],
     "links": [
       { "url": "https://stinelock.github.io/Radar/", "text": "Website" },
-      { "url": "https://github.com/stinelock/Radar", "text": "GitHub Link" }
+      { "url": "https://github.com/stinelock/Radar", "text": "GitHub" }
     ]
   },
   {
@@ -32,7 +32,7 @@
     "links": [
       {
         "url": "https://github.com/stinelock/forlaens-baglaens",
-        "text": "GitHub Link"
+        "text": "GitHub"
       }
     ]
   },
@@ -49,11 +49,11 @@
     "links": [
       {
         "url": "http://eksamen2025.designsbymia.dk/",
-        "text": "Steno infoskærm"
+        "text": "Website"
       },
       {
         "url": "https://github.com/stinelock/steno-museet",
-        "text": "GitHub Link"
+        "text": "GitHub"
       }
     ]
   }

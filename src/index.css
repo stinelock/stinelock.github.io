@@ -274,7 +274,8 @@ hr {
   padding: 0 2rem;
   margin-top: 100px;
 }
-.detailpage .img-container {
+
+.img-container #detail-hero img {
   margin-top: 2rem;
   height: 400px;
 }
@@ -321,6 +322,12 @@ hr {
 #fokus {
   align-items: flex-start;
   margin: 1rem 0;
+}
+
+.project-imgs img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .tags-list {
@@ -396,17 +403,32 @@ hr {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;
-  /* margin-top: 7rem; */
-  padding: 0 2rem 4rem 2rem;
+  margin-top: 2rem;
+  padding: 2rem 2rem 4rem 2rem;
   text-align: left;
 }
 .contact-section h1 {
   margin-bottom: 2rem;
 }
+.contact-section h2 {
+  font-weight: 400;
+ font-family: 'poppins', sans-serif;
+  font-size: 2rem;
+}
 
 /*-------------Playground-------------*/
 .page-playground {
   margin: 150px 2rem;
+}
+
+.page-playground h2 {
+  font-weight: 400;
+ font-family: 'poppins', sans-serif;
+  font-size: 1.2rem;
+}
+
+#center{
+  text-align: center;
 }
 
 .intro-playground {
@@ -416,11 +438,23 @@ hr {
   height: 430px;
 }
 
+ .page-playground .project-imgs .img-container {
+    width: 100%;
+    height: 400px;
+  }
+
+  .page-playground .project-imgs .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 .page-playground .project-imgs {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin: 100px 0;
+  
 }
 
 .page-playground .project-imgs :nth-child(3) {
@@ -593,7 +627,7 @@ footer a img {
   }
 
   nav a:hover {
-    font-weight: 600;
+    color: var(--neon-green);
     transition: color 0.3s ease;
   }
 
@@ -719,8 +753,10 @@ footer a img {
     height: 400px;
   }
 
-  .project-imgs .img-container img {
-    object-fit: contain;
+  .project-imgs img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   }
 
   .other-projects {
@@ -743,6 +779,11 @@ footer a img {
   }
 
   /*------------PlayGround-------------*/
+
+  .page-playground h2 {
+  font-size: 2rem;
+}
+
   .page-playground .project-imgs {
     flex-direction: row;
     gap: 2rem;
@@ -753,13 +794,14 @@ footer a img {
     padding: 0 4rem 4rem 4rem;
   }
 
-  .project-imgs .img-container {
+ .page-playground .project-imgs .img-container {
     width: 48%;
     height: 500px;
-    object-fit: cover;
   }
 
-  .project-imgs .img-container img {
+  .page-playground .project-imgs .img-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -774,7 +816,9 @@ footer a img {
     gap: 1.5rem;
   }
   .contact-section .contact-cta {
+    font-size: 2rem;
     padding: 0.5rem 2rem;
+    border-radius: 100px;
   }
 
   .contact-cta:hover {
