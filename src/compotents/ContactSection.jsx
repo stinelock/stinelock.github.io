@@ -5,7 +5,7 @@ const ContactSection = forwardRef(({page}, ref) => {
     if (page === "home") {
       return (
         <section ref={ref} className="contact-section">
-          <h1>Mangler I praktikant?</h1>
+          <h1>Mangler I <br/>praktikant?</h1>
           <ContactCTA />
         </section>
       );
