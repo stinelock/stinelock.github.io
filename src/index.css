@@ -30,7 +30,7 @@ body {
   --text-color-dark: #33332e;
   --white: #fffef5;
   --line-color: #383495;
-  --cta-border-radius: 20px;
+  --cta-border-radius: 100px;
   --border-radius: 50px;
 
   font-family: "graveur-variable", sans-serif;
@@ -626,9 +626,11 @@ footer a img {
     padding: 0;
   }
 
-  nav a:hover {
-    color: var(--neon-green);
-    transition: color 0.3s ease;
+ .not-cta:hover {
+    text-decoration: underline;
+    text-decoration-line:overline;
+    text-decoration-color: var(--neon-green);
+       transition: text-decoration 0.3s ease;
   }
 
   .contact-cta {
@@ -641,8 +643,13 @@ footer a img {
   }
 
   .contact-cta span {
+    text-decoration: none;
     color: var(--text-color-dark);
     z-index: 1;
+  }
+  .contact-cta span:hover {
+    color: var(--white);
+    transition: all 0.3s ease;
   }
 
   .contact-cta .background {

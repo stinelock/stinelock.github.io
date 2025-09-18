@@ -37,10 +37,12 @@ export default function NavBar() {
 
         {/*Desktop navigation */}
         <nav className="nav-desktop">
-          <NavLink to="/" state={{ scrollTo: "projects" }}>
+          <NavLink to="/" state={{ scrollTo: "projects" }} className="not-cta">
             PROJEKTER
           </NavLink>
-          <NavLink to="/legeplads">LEGEPLADS</NavLink>
+          <NavLink to="/legeplads" className="not-cta">
+            LEGEPLADS
+          </NavLink>
           <ContactCTA />
         </nav>
 
