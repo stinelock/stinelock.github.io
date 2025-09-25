@@ -449,12 +449,12 @@ hr {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .lazy-img.loaded {
   opacity: 1;
   object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
 .page-playground .project-imgs {
