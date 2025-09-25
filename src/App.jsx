@@ -3,9 +3,9 @@ import HomePage from "./pages/HomePage";
 import PlaygroundPage from "./pages/PlaygroundPage";
 import ContactPage from "./pages/ContactPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
-import NavBar from "./compotents/NavBar";
-import Footer from "./compotents/Footer";
-import ScrollToTop from "./compotents/ScrollToTop";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (

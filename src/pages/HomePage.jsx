@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-import ProjectCard from "../compotents/ProjectCard";
-import Signature from "../compotents/Signature";
-import SkillSection from "../compotents/SkillSection";
-import ContactSection from "../compotents/ContactSection";
+import ProjectCard from "../components/ProjectCard";
+import Signature from "../components/Signature";
+import SkillSection from "../components/SkillSection";
+import ContactSection from "../components/ContactSection";
 
-
-export default function HomePage({scrollTo}) {
+export default function HomePage({ scrollTo }) {
   const [projects, setProjects] = useState([]);
-   const projectRef = useRef(null);
-   const introRef = useRef(null);
-   const contactRef = useRef(null);
+  const projectRef = useRef(null);
+  const introRef = useRef(null);
+  const contactRef = useRef(null);
 
   useEffect(() => {
     if (scrollTo === "projects" && projectRef.current) {
@@ -37,7 +36,6 @@ export default function HomePage({scrollTo}) {
     setProjects(data);
     console.log(data);
   }
-  
 
   return (
     <>
