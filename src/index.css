@@ -460,7 +460,6 @@ hr {
   height: 400px;
   overflow: hidden;
   background-color: var(--light-blue);
-  
 }
 
 .lazy-img {
@@ -829,6 +828,11 @@ footer a img {
 
   .playground-line-container .cls-1 {
     stroke-dasharray: 1000;
+    stroke-width: 3px;
+  }
+
+  .playground-line-container .cls-2 {
+    stroke-width: 3px;
   }
 
   .page-playground .project-imgs {
