@@ -45,7 +45,7 @@ export default function PlaygroundPage() {
           </div>
         </section>
         <section className="instagram" ref={instagramRef}>
-          <p>Se mine analoge kreationer!</p>
+          <p>Se flere analoge kreationer!</p>
           <a href="https://www.instagram.com/stines.streger?utm_source=ig_web_button_share_sheet&igsh=Mms4MmM5d2N0MHM1">
             <img src="/img/insta-icon.svg" className="insta"></img>
           </a>
