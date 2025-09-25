@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ins } from "motion/react-client";
 
 export default function PlaygroundLine({ introRef, instagramRef }) {
   const [paths, setPaths] = useState([]);
   const [viewBox, setViewBox] = useState("0 0 800 2850");
-  const [svgHeight, setSvgHeight] = useState(0);
+  const [svgHeight, setSvgHeight] = useState("auto");
   const isMobile = window.innerWidth < 768;
 
   const { scrollYProgress } = useScroll();
@@ -33,9 +32,7 @@ export default function PlaygroundLine({ introRef, instagramRef }) {
 
           const height = instagramTop - introBottom;
 
-          isMobile
-            ? setSvgHeight("auto")
-            : setSvgHeight(height > 0 ? height + "px" : 0); // Ensure height is non-negative
+          setSvgHeight(isMobile ? "auto" : height > 0 ? height : 0);
         }
       }
 
@@ -47,6 +44,10 @@ export default function PlaygroundLine({ introRef, instagramRef }) {
 
     setupSvg();
   }, [introRef, instagramRef]);
+
+  useEffect(() => {
+    console.log("Calculated SVG height:", svgHeight);
+  }, [svgHeight]);
 
   return (
     <div style={{ position: "relative" }}>

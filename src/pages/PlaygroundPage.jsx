@@ -9,6 +9,9 @@ export default function PlaygroundPage() {
   return (
     <>
       <main className="page-playground">
+        <div className="playground-line-container">
+          <PlaygroundLine introRef={introRef} instagramRef={instagramRef} />
+        </div>
         <section className="intro-playground" ref={introRef}>
           <h1>Legeplads</h1>
           <h2>
@@ -16,11 +19,8 @@ export default function PlaygroundPage() {
             <br />
             men leger med penselsstrøg og stribestrik
           </h2>
-          <div className="playground-line-container">
-            <PlaygroundLine introRef={introRef} instagramRef={instagramRef} />
-          </div>
         </section>
-        
+
         <section className="project-imgs">
           <div className="img-container">
             <LazyImage src="img/vin.png"></LazyImage>

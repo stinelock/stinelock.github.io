@@ -427,8 +427,10 @@ hr {
 }
 
 .playground-line-container {
-  position: relative;
-  top: 0;
+  display: block;
+  position: absolute;
+  top: 300px;
+  right: 0;
   height: auto;
   width: 100%;
   pointer-events: none;
@@ -813,6 +815,7 @@ footer a img {
   }
 
   .playground-line-container {
+    display: block;
     position: absolute;
     left: 0px;
     width: 100%;
