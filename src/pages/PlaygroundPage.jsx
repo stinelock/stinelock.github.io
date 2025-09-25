@@ -1,9 +1,11 @@
 import LazyImage from "../compotents/LazyImage";
+import PlaygroundLine from "../compotents/Playgroundline";
 
 export default function PlaygroundPage() {
   return (
     <>
       <main className="page-playground">
+        <PlaygroundLine />
         <section className="intro-playground">
           <h1>Legeplads</h1>
           <h2>
@@ -38,7 +40,7 @@ export default function PlaygroundPage() {
         <section className="instagram">
           <p>Se mine analoge kreationer!</p>
           <a href="https://www.instagram.com/stines.streger?utm_source=ig_web_button_share_sheet&igsh=Mms4MmM5d2N0MHM1">
-            <img src="/img/insta-icon.svg"></img>
+            <img src="/img/insta-icon.svg" className="insta"></img>
           </a>
         </section>
       </main>
