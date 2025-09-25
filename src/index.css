@@ -452,9 +452,9 @@ hr {
   transition: opacity 0.3s ease;
 }
 
-.lazy-img.loaded{
+.lazy-img.loaded {
   opacity: 1;
-object-fit: cover;
+  object-fit: cover;
 }
 
 .page-playground .project-imgs {
