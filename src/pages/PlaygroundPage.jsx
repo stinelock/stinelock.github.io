@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import LazyImage from "../components/LazyImage";
-import PlaygroundLine from "../components/Playgroundline";
+import PlaygroundLine from "../components/PlaygroundLine";
 
 export default function PlaygroundPage() {
   const introRef = useRef(null);
