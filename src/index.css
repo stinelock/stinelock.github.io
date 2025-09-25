@@ -29,6 +29,7 @@ body {
   --text-color-light: #f1f1f1;
   --text-color-dark: #33332e;
   --white: #fffef5;
+  --white-rgb: 255, 254, 245;
   --line-color: #383495;
   --cta-border-radius: 100px;
   --border-radius: 50px;
@@ -443,6 +444,8 @@ hr {
 
 #center {
   text-align: center;
+  padding: 2rem;
+  background-color: rgb(var(--white-rgb), 0.5);
 }
 
 .intro-playground {
@@ -457,6 +460,7 @@ hr {
   height: 400px;
   overflow: hidden;
   background-color: var(--light-blue);
+  
 }
 
 .lazy-img {
