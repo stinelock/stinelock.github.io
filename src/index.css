@@ -440,12 +440,21 @@ hr {
 .page-playground .project-imgs .img-container {
   width: 100%;
   height: 400px;
+  overflow: hidden;
+  background-color: var(--light-blue);
 }
 
-.page-playground .project-imgs .img-container img {
+.lazy-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-img.loaded{
+  opacity: 1;
+object-fit: cover;
 }
 
 .page-playground .project-imgs {

@@ -1,3 +1,5 @@
+import LazyImage from "../compotents/LazyImage";
+
 export default function PlaygroundPage() {
   return (
     <>
@@ -12,25 +14,25 @@ export default function PlaygroundPage() {
         </section>
         <section className="project-imgs">
           <div className="img-container">
-            <img src="img/vin.png"></img>
+            <LazyImage src="img/vin.png"></LazyImage>
           </div>
           <div className="img-container">
-            <img src="img/sologmaane.png"></img>
+            <LazyImage src="img/sologmaane.png"></LazyImage>
           </div>
           <div className="img-container">
-            <img src="img/omvendt.png"></img>
+            <LazyImage src="img/omvendt.png"></LazyImage>
           </div>
         </section>
         <h2 id="center">Jeg holder især af farver og deres kontraster</h2>
         <section className="project-imgs">
           <div className="img-container">
-            <img src="img/strik1.jpg"></img>
+            <LazyImage src="img/strik1.jpg"></LazyImage>
           </div>
           <div className="img-container">
-            <img src="img/strik2.jpg"></img>
+            <LazyImage src="img/strik2.jpg"></LazyImage>
           </div>
           <div className="img-container">
-            <img src="img/strik3.jpg"></img>
+            <LazyImage src="img/strik3.jpg"></LazyImage>
           </div>
         </section>
         <section className="instagram">

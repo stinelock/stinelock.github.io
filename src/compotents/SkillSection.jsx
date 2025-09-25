@@ -19,7 +19,7 @@ export default function SkillPills() {
 
   return (
     <div className="skill-container">
-      {skills.map(({ text, top, left, rotation }, i) => (
+      {skills.map(({ text, top, left }, i) => (
         <motion.div
           key={i}
           className="skill-pill"
