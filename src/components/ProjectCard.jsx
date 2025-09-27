@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
       <div className="project-card-info">
         <div className="project-card-heading">
           <h2>{project.title}</h2>
-          <p>{project.year}</p>
+          <p id="year">{project.year}</p>
         </div>
         <p> {project.tags.join(", ")} </p>
       </div>

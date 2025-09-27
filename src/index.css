@@ -64,7 +64,8 @@ a {
 }
 
 p {
-  font-size: 1.3rem;
+  font-family: "poppins", sans-serif;
+  font-size: 1rem;
   line-height: 150%;
   margin: 0;
 }
@@ -242,7 +243,12 @@ hr {
 }
 
 .project-card p {
+  font-family: "poppins", sans-serif;
   font-size: 1.2rem;
+}
+
+#year{
+  font-family: "graveur-variable", sans-serif;
 }
 
 .project-card h2 {
@@ -305,7 +311,7 @@ hr {
   color: var(--grey);
 }
 
-.project-info :nth-child(2) {
+.project-info > :nth-child(2) {
   font-size: 1.5rem;
 }
 
@@ -338,6 +344,8 @@ hr {
 
 .tags-list li {
   margin-bottom: 4px;
+  font-family: "poppins", sans-serif;
+  font-size: 1rem;
 }
 
 .project-links {
@@ -413,7 +421,7 @@ hr {
 .contact-section h2 {
   font-weight: 400;
   font-family: "poppins", sans-serif;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 /*-------------Playground-------------*/
@@ -644,6 +652,10 @@ footer a img {
 /*----------------Computer-----------------*/
 
 @media (min-width: 992px) {
+h2{
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
   .page {
     padding: 0 4rem;
     margin-top: 110px;
@@ -666,7 +678,7 @@ footer a img {
     text-decoration: underline;
     text-decoration-line: overline;
     text-decoration-color: var(--neon-green);
-    transition: text-decoration 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .contact-cta {
@@ -676,6 +688,10 @@ footer a img {
     padding: 0.2rem 1.5rem;
     overflow: hidden;
     display: inline-block;
+  }
+
+  .contact-cta.active {
+    background-color: var(--neon-green);
   }
 
   .contact-cta span {
@@ -872,9 +888,13 @@ footer a img {
 
   /*-------------Contact---------------*/
   .contact-section {
-    margin: 5rem 5rem 5rem;
+    margin: 2rem 5rem 5rem;
     gap: 3rem;
     height: auto;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
   }
   .contact-section .contact-cta {
     font-size: 1.5rem;
