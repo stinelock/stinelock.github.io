@@ -265,9 +265,9 @@ hr {
 
 .project-card-heading {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
 }
 
@@ -752,6 +752,7 @@ footer a img {
     padding: 1.5rem;
     width: 100%;
     transition: all 0.3s ease;
+    min-height: 500px;
   }
 
   .project-card:hover {
@@ -768,7 +769,7 @@ footer a img {
   }
 
   .project-card h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .project-card-heading p {

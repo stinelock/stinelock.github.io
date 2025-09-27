@@ -11,7 +11,7 @@ export default function ProjectCard({ project }) {
           <h2>{project.title}</h2>
           <p id="year">{project.year}</p>
         </div>
-        <p> {project.tags.join(", ")} </p>
+        {/* <p> {project.tags.join(", ")} </p> */}
       </div>
     </NavLink>
   );
