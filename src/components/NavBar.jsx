@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from "motion/react";
-// import { stagger } from "motion/react";
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import ContactCTA from "./ContactCTA";
@@ -26,7 +25,7 @@ export default function NavBar() {
       opacity: 0,
       transition: {
         when: "afterChildren",
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
         staggerDirection: -1,
       },
     },
@@ -34,7 +33,7 @@ export default function NavBar() {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
         staggerDirection: 1,
       },
     },
@@ -122,23 +121,25 @@ export default function NavBar() {
             id="main-navigation"
             className="menu-overlay"
             initial="closed"
-            animate={isOpen ? "open" : "closed"}
+            animate="open"
             exit="closed"
             variants={menuVariants}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             {navItems.map((item, i) =>
               item.type === "link" ? (
-                <MotionNavLink
+                <motion.div
                   key={i}
-                  to={item.to}
-                  onClick={closeMenu}
                   variants={itemVariants}
-                  {...(item.state ? { state: item.state } : {})}
-                  className={item.className}
+                  onClick={closeMenu}
                 >
-                  {item.label}
-                </MotionNavLink>
+                  <NavLink
+                    to={item.to}
+                    {...(item.state ? { state: item.state } : {})}
+                    className={item.className}
+                  >
+                    {item.label}
+                  </NavLink>
+                </motion.div>
               ) : (
                 <motion.hr key={i} variants={itemVariants} />
               )
