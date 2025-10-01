@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
+// import { stagger } from "motion/react";
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import ContactCTA from "./ContactCTA";
@@ -12,20 +13,77 @@ export default function NavBar() {
     navigate("/", { state: { scrollTo: "top" } }); // Pass state to trigger scroll-to-top
   };
 
-
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
   };
 
   const closeMenu = () => {
     setIsOpen(false);
-
   };
 
   const menuVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    closed: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+        staggerChildren: 0.1,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+        staggerDirection: 1,
+      },
+    },
   };
+
+  const itemVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+      },
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+      },
+    },
+  };
+
+  const navItems = [
+    {
+      type: "link",
+      to: "/",
+      label: "PROJEKTER",
+      state: { scrollTo: "projects" },
+    },
+    {
+      type: "hr",
+    },
+    {
+      type: "link",
+      to: "/legeplads",
+      label: "LEGEPLADS",
+    },
+    {
+      type: "hr",
+    },
+    {
+      type: "link",
+      to: "/kontakt",
+      label: "KONTAKT MIG",
+      className: "contact-cta",
+    },
+  ];
+
+  const MotionNavLink = motion.create(NavLink);
 
   return (
     <>
@@ -63,27 +121,28 @@ export default function NavBar() {
           <motion.nav
             id="main-navigation"
             className="menu-overlay"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
+            initial="closed"
+            animate={isOpen ? "open" : "closed"}
+            exit="closed"
             variants={menuVariants}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <NavLink
-              to="/"
-              state={{ scrollTo: "projects" }}
-              onClick={closeMenu}
-            >
-              PROJEKTER
-            </NavLink>
-            <hr />
-            <NavLink to="/legeplads" onClick={closeMenu}>
-              LEGEPLADS
-            </NavLink>
-            <hr />
-            <NavLink to="/kontakt" onClick={closeMenu} className="contact-cta">
-              KONTAKT MIG
-            </NavLink>
+            {navItems.map((item, i) =>
+              item.type === "link" ? (
+                <MotionNavLink
+                  key={i}
+                  to={item.to}
+                  onClick={closeMenu}
+                  variants={itemVariants}
+                  {...(item.state ? { state: item.state } : {})}
+                  className={item.className}
+                >
+                  {item.label}
+                </MotionNavLink>
+              ) : (
+                <motion.hr key={i} variants={itemVariants} />
+              )
+            )}
           </motion.nav>
         )}
       </AnimatePresence>

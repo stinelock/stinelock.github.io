@@ -15,7 +15,6 @@ export default function Signature({ introRef, contactRef }) {
   const imageRef = useRef(null);
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-
   //Fetch data
   async function fetchSignature() {
     const res = await fetch("/signature.json"); //fetch data
