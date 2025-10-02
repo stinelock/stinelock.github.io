@@ -750,7 +750,7 @@ footer a img {
 
   .project-card {
     padding: 1.5rem;
-    width: 100%;
+    width: 25%;
     transition: all 0.3s ease;
     min-height: 500px;
   }
