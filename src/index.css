@@ -224,7 +224,7 @@ hr {
   padding: 0.8rem;
   text-decoration: none;
   color: var(--text-color-dark);
-  max-width: 326px;
+  width: 326px;
   z-index: 3;
 }
 
