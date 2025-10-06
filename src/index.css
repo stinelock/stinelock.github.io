@@ -24,7 +24,7 @@ body {
 :root {
   --light-green: #dff0b9;
   --neon-green: #a8f00c;
-  --light-blue: #a8ccff;
+  --light-blue: 184, 214, 255;
   --grey: #8a8a8a;
   --text-color-light: #f1f1f1;
   --text-color-dark: #33332e;
@@ -220,7 +220,8 @@ hr {
 
 .project-card {
   font-family: "graveur-variable", sans-serif;
-  background-color: var(--light-blue);
+  background-color: rgb(var(--light-blue), 0.5);
+  border: solid 4px rgb(var(--light-blue));
   padding: 0.8rem;
   text-decoration: none;
   color: var(--text-color-dark);
@@ -477,7 +478,7 @@ hr {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  background-color: var(--light-blue);
+  background-color: var(--light-sand);
 }
 
 .lazy-img {
@@ -756,7 +757,8 @@ footer a img {
   }
 
   .project-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    background-color: rgb(var(--light-blue));
   }
 
   .img-container {

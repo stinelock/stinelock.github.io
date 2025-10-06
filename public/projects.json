@@ -5,7 +5,7 @@
     "year": "2024",
     "description": "Projektet er en platform, der skal engagere Radars gæster og skabe et fællesskab omkring spillestedet. Jeg tog udgangspunkt i Radars egen visuelle identitet og ville skabe et legende og eksperimenterende univers, der fanger stemningen af at være til koncert i former og farver. I løsningen har jeg skulle forholde mig til indholdskilder og forskellige skærmstørrelsers mængde af indhold.",
     "tags": ["Responsivitet", "Visuel Identitet", "Design"],
-    "blueimage": "/img/radartlfblue.png",
+    "blueimage": "/img/radartlfcard.webp",
     "headerimage": "/img/radartlf.jpg",
     "image": [
       "/img/radardesk1.png",
@@ -22,7 +22,7 @@
     "year": "2024",
     "description": "Projektet for tapasrestauranten Forlæns & Baglæns havde fokus på at skabe en mere responsiv og brugervenlig hjemmeside med designmæssige forbedringer. Målet var at indfange restaurantens særlige atmosfære og fysiske rammer i en overskuelig digital platform, der imødekommer gæsternes vigtigste behov.",
     "tags": ["Responsivitet", "Visuel Identitet", "Redesign"],
-    "blueimage": "/img/fbblue.png",
+    "blueimage": "/img/fbcard.webp",
     "headerimage": "/img/fb1.png",
     "image": [
       "/img/fbdesk.png",
@@ -43,7 +43,7 @@
     "description": "Dette projekt er et bud på interaktiv formidling af menstruation i Stenomuseets udstilling “Den Oversete Krop”. Fokus var på at skabe et positivt og let univers målrettet børn i mellemtrinnet. I udviklingen af skærmen lå fokus især på features styret af JavaScript.",
     "tags": ["Målgruppestyret design", "Interaktiv formidling", "JavaScript"],
     "headerimage": "/img/steno2.webp",
-    "blueimage": "/img/stenublue.png",
+    "blueimage": "/img/stenocard.webp",
     "image": ["/img/steno2.png", "/img/stenovinter.png"],
     "video":"/video/stenovideo.mp4",
     "links": [
