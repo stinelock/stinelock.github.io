@@ -331,10 +331,28 @@ hr {
   margin: 1rem 0;
 }
 
+/* .detailpage .project-imgs :nth-child(3) {
+  display: none;
+} */
+
 .project-imgs img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.detailpage .project-imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 100px 0;
+}
+
+.pil-container img {
+ transform: rotate(90deg);
+  width: 100px;
+  height: 100px;
 }
 
 .tags-list {
@@ -809,21 +827,40 @@ footer a img {
     height: 650px;
     width: 100%;
   }
+
+  .detailpage .project-imgs {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 100px 0 200px;
+}
   .project-imgs {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
+    margin: 200px 0;
   }
   .detailpage .project-imgs .img-container {
     width: 50%;
     height: 400px;
   }
 
+  .processdescription{
+    margin-bottom: 200px;
+  }
+
   .project-imgs img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  .pil-container{
+    width: 200px;
+  }
+
+  .pil-container img {
+    transform: rotate(0deg);
   }
 
   .other-projects {

@@ -71,7 +71,26 @@ export default function ProjectDetailPage() {
         </div>
       </section>
       <section className="project-imgs">
-        {project.image?.map((image, index) => (
+        {project.procesimage &&
+          project.procesimage.length > 0 &&
+          project.procesimage.map((image, index) => (
+            <React.Fragment key={index}>
+              <div className="img-container">
+                <img src={image} alt={project.title} />
+              </div>
+              {index !== project.procesimage.length - 1 && (
+                <div className="pil-container">
+                  <img src="/img/pil.webp" alt="pil" />
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+      </section>
+      {project.processdescription ? (
+        <p className="processdescription">{project.processdescription}</p>
+      ) : null}
+      <section className="project-imgs">
+        {project.deviceimage?.map((image, index) => (
           <div className="img-container" key={index}>
             <img src={image} alt={project.title} />
           </div>

@@ -1,16 +1,19 @@
 [
   {
     "id": "1",
-    "title": "Radar",
+    "title": "RadarResonans",
     "year": "2024",
-    "description": "Projektet er en platform, der skal engagere Radars gæster og skabe et fællesskab omkring spillestedet. Jeg tog udgangspunkt i Radars egen visuelle identitet og ville skabe et legende og eksperimenterende univers, der fanger stemningen af at være til koncert i former og farver. I løsningen har jeg skulle forholde mig til indholdskilder og forskellige skærmstørrelsers mængde af indhold.",
+    "description": "Projektet er en platform, der skal engagere og skabe et fællesskab omkring spillestedet Radar. Jeg tog udgangspunkt i Radars egen visuelle identitet og ville skabe et legende og eksperimenterende univers, der fanger stemningen af at være til koncert i former og farver. I løsningen har jeg skulle forholde mig til indholdskilder og forskellige skærmstørrelsers mængde af indhold.",
+    "processdescription": "Jeg har kaldt siden Resonans, fordi navnet leger med lydbølger ligesom Radar og symboliserer gensvar og fællesskab mellem brugerne. Logoet tager udgangspunkt i halvcirklen fra Radars logo, som danner grundlag for de buer, der præger sidens endelige design. De forskudte halvcirkler refererer til lydbølger, spejling og samhørighed, mens buernes bløde, organiske former understøtter følelsen af varme og fællesskab, der opstår gennem musik.",
     "tags": ["Responsivitet", "Visuel Identitet", "Design"],
     "blueimage": "/img/radartlfcard.webp",
     "headerimage": "/img/radartlf.jpg",
-    "image": [
-      "/img/radardesk1.png",
-      "/img/radarphone.png"
+    "procesimage": [
+      "/img/radarlogoskitser.jpg",
+      "/img/radarlogo.png",
+      "/img/Mockupdesk.webp"
     ],
+    "deviceimage": ["/img/radardesk1.png", "/img/radarphone.png"],
     "links": [
       { "url": "https://stinelock.github.io/Radar/", "text": "Website" },
       { "url": "https://github.com/stinelock/Radar", "text": "GitHub" }
@@ -24,11 +27,9 @@
     "tags": ["Responsivitet", "Visuel Identitet", "Redesign"],
     "blueimage": "/img/fbcard.webp",
     "headerimage": "/img/fb1.png",
-    "image": [
-      "/img/fbdesk.png",
-      "/img/fbtablet.png",
-      "/img/fbtlf.png"
+    "procesimage": [
     ],
+    "deviceimage": ["/img/fbdesk.png", "/img/fbtablet.png", "/img/fbtlf.png"],
     "links": [
       {
         "url": "https://github.com/stinelock/forlaens-baglaens",
@@ -44,8 +45,9 @@
     "tags": ["Målgruppestyret design", "Interaktiv formidling", "JavaScript"],
     "headerimage": "/img/steno2.webp",
     "blueimage": "/img/stenocard.webp",
-    "image": ["/img/steno2.png", "/img/stenovinter.png"],
-    "video":"/video/stenovideo.mp4",
+    "procesimage": [],
+    "deviceimage": ["/img/steno2.png", "/img/stenovinter.png"],
+    "video": "/video/stenovideo.mp4",
     "links": [
       {
         "url": "http://eksamen2025.designsbymia.dk/",
